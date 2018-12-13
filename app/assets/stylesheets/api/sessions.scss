@@ -1,3 +1,21 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home-page {
+    border-style: solid;
+    border-color: red;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-header {
+    padding-left: 80px;
+    font-family: "Nanum Pen Script";
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    background-color: orangered;
+}

@@ -1,0 +1,23 @@
+.header-group {
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: blue;
+    height: 150px;
+    width: 600px;
+}
+
+.header-name {
+    margin: 4px 0 4px 0;
+    font-size: 40px;
+    
+}
+
+.header-button {
+    margin-right: 40px;
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+    border: 1px solid black;
+    
+}
