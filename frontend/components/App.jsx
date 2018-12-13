@@ -7,8 +7,10 @@ import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 
 const App = () => (
     <div>
-        
+        <header>
         <h1>Tea?</h1>
+
+        </header>
         
 
         <GreetingContainer />
