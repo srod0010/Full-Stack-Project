@@ -10,12 +10,14 @@
     justify-content: space-between;
 }
 
-.main-header {
-    padding-left: 80px;
+.main-nav {
+    height: 80px;
+    padding-left: 150px;
     font-family: "Nanum Pen Script";
+    color: white;
     border: 2px solid black;
     display: flex;
     justify-content: space-between;
     width:100%;
-    background-color: orangered;
+    background-color: rgb(244, 182, 66);
 }

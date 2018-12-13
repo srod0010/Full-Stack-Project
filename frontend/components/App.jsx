@@ -8,7 +8,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
     <div className="home-page">
-        <div className="main-header">
+        <div className="main-nav">
             <h1>Meals With Strangers</h1>
             <GreetingContainer />
         </div>
