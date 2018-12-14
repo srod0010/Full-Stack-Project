@@ -3,7 +3,9 @@
     border-color: red;
     height: 100%;
     width: 100%;
-    justify-content: space-between;
+    display: flex; 
+    flex-direction: column;
+    // justify-content: space-between;
 }
 
 .main-nav {
