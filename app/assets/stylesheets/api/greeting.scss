@@ -1,8 +1,33 @@
+.home-page {
+    border-style: solid;
+    border-color: red;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main-nav {
+    height: 80px;
+    padding-left: 150px;
+    font-family: "Nanum Pen Script";
+    color: white;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(244, 182, 66);
+}
+
+.login-signup{
+    width:20%;
+}
+
+
 .header-group {
     display: flex;
     justify-content: space-between;
     border-style: solid;
-    border-color: blue;
+    border-color: white;
     height: 100%;
     width: 40%;
 }
@@ -25,4 +50,9 @@
     background-color: rgb(244, 182, 66);
     color: white;
     border: 1px solid white;
+}
+
+.logo{
+    text-decoration-line: none;
+    color: white;
 }

@@ -1,0 +1,40 @@
+.outer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+
+
+.pic {
+    background: url(https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1934&q=80);
+    height: 500px;
+    width: 100%;
+    opacity: 0.7;
+    background-position: center center;
+    background-size:cover;
+    background-repeat:no-repeat;    
+    
+}
+
+.pic-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.outer-text {
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+     font-size: 40px;
+}
+
+.inner-text {
+    color: white;
+    transform: translate(25%, 25%);
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
