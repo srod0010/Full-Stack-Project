@@ -1,14 +1,14 @@
 .page-wrapper {
     height: 100%;
-    width: 100%;
-    background-color: #FAF6E8;
+    // width: 100%;
+    background-color: rgb(250, 246, 232);
     padding-left: 450px;
 }
 
 .login-wrapper {
     width: 700px;
     height: 500px;
-    border: 1px solid black;
+    // border: 1px solid black;
     text-align: center;
     justify-content: center;
 }
@@ -49,4 +49,5 @@
     color: white;
     text-transform: uppercase;
     border-radius: 15px;
+    margin-bottom: 50px;
 }
