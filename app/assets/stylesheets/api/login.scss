@@ -1,0 +1,52 @@
+.page-wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #FAF6E8;
+    padding-left: 450px;
+}
+
+.login-wrapper {
+    width: 700px;
+    height: 500px;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+}
+
+.form-wrapper h2{
+    text-align: left;
+    color: #EF6236;
+    font-size: 1.5em;
+    font-family: "canada-type-gibson",
+    "Gibson",
+    "Helvetica Neue",
+    sans-serif;
+    font-weight: bold;
+}
+
+.form-wrapper p {
+    text-align: left;
+    font-size: 20px;
+}
+
+
+
+.form-wrapper {
+    width: 100%;
+}
+
+.form-wrapper input {
+    height: 60px;
+    width: 650px;
+    margin-top: 30px;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+.form-wrapper .submit-button {
+    background: #c93c10;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 15px;
+}
