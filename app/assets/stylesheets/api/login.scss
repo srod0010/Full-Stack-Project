@@ -41,6 +41,7 @@
     margin-top: 30px;
     border-radius: 6px;
     font-size: 20px;
+    padding-left: 10px;
 }
 
 .form-wrapper .submit-button {
@@ -49,5 +50,14 @@
     color: white;
     text-transform: uppercase;
     border-radius: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
+}
+
+.form-wrapper .demo-submit-button {
+    background: #397bc7;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 15px;
+    margin-bottom: 5px;
 }
