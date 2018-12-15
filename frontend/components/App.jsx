@@ -10,7 +10,6 @@ import SplashComponent from './splash/splash';
 const App = () => (
     <div className="home-page">
         <header className="main-nav">
-            
             <Link className="logo" to="/"><h1>Meals With Strangers</h1></Link>
             <GreetingContainer />
         </header>

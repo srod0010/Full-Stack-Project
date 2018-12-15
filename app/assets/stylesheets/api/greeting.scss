@@ -10,7 +10,7 @@
 
 .main-nav {
     height: 80px;
-    padding-left: 150px;
+    // padding-left: 150px;
     font-family: "Nanum Pen Script";
     color: white;
     // border: 2px solid black;
@@ -20,8 +20,28 @@
     background-color: rgb(244, 182, 66);
 }
 
+.main-nav h1{
+    padding-left: 40px;
+}
+
 .login-signup{
     width:20%;
+}
+
+.greeting-button {
+    margin-top: 15px;
+    margin-right: 10px;
+    height: 40px;
+    width: 100px;
+    background: none;
+    border: none;
+    
+}
+
+.greeting-button-signup {
+    height: 40px;
+    width: 100px;
+    background: white;
 }
 
 
