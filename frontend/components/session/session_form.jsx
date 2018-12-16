@@ -71,8 +71,8 @@ class sessionForm extends React.Component {
             </div>
         )} else{
             return (
-                <div>
-                    <form onSubmit={this.handleSubmit}>
+                <div className="signup-wrapper">
+                    <form onSubmit={this.handleSubmit} className="signup-form">
                         Please {this.props.formType} or {this.props.navLink}
                         {this.renderErrors()}
                         <input type="text" placeholder="username" value={this.state.username} onChange={this.update("username")} />
