@@ -5,7 +5,25 @@
 }
 
 .signup-form {
-    width: 650px;
+    width: 980px;
+    padding: 50px 20px;
     border: 1px solid green;
     margin: 0 auto;
+}
+
+.signup-fields {
+    width: 660px;
+    margin: 0px auto;
+}
+
+h2 {
+    border: 1px solid red;
+}
+input {
+    width: 650px;
+    height: 60px;
+    margin: 20px auto;
+    line-height: 1.7;
+    font-size: 18px;
+    padding-left: 20px;
 }
