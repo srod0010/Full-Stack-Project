@@ -73,18 +73,22 @@ class sessionForm extends React.Component {
             return (
                 <div className="signup-wrapper">
                     <form onSubmit={this.handleSubmit} className="signup-form">
-                        Please {this.props.formType} or {this.props.navLink}
-                        {this.renderErrors()}
-                        <input type="text" placeholder="username" value={this.state.username} onChange={this.update("username")} />
-                        <br/>
-                        <input type="text" placeholder="email" value={this.state.email} onChange={this.update("email")} />
-                        <br/>
-                        <input type="text" placeholder="city" value={this.state.city} onChange={this.update("city")} />
-                        <br/>
-                        <input type="password" placeholder="password" value={this.state.password} onChange={this.update("password")} />
-                        <br/>
-                        <input type="submit" value="submit" />
-                        <input className="submit-button" type="submit" onClick={() => this.props.demo(demoUser)} value="demo" />
+                        <div className="signup-fields">
+                            <h2>
+                                Please {this.props.formType} or {this.props.navLink}
+                            </h2>
+                            {this.renderErrors()}
+                            <input type="text" placeholder="Username" value={this.state.username} onChange={this.update("username")} />
+                            
+                            <input type="text" placeholder="Email Address" value={this.state.email} onChange={this.update("email")} />
+                            
+                            <input type="text" placeholder="City" value={this.state.city} onChange={this.update("city")} />
+                            
+                            <input type="password" placeholder="Password" value={this.state.password} onChange={this.update("password")} />
+                            
+                            <input type="submit" value="submit" />
+                            <input className="submit-button" type="submit" onClick={() => this.props.demo(demoUser)} value="demo" />
+                        </div>
                     </form>
                 </div>  
             )
