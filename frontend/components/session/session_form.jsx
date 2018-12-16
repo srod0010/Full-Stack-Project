@@ -74,9 +74,6 @@ class sessionForm extends React.Component {
                 <div className="signup-wrapper">
                     <form onSubmit={this.handleSubmit} className="signup-form">
                         <div className="signup-fields">
-                            <h2>
-                                Please {this.props.formType} or {this.props.navLink}
-                            </h2>
                             {this.renderErrors()}
                             <input type="text" placeholder="Username" value={this.state.username} onChange={this.update("username")} />
                             
@@ -84,10 +81,11 @@ class sessionForm extends React.Component {
                             
                             <input type="text" placeholder="City" value={this.state.city} onChange={this.update("city")} />
                             
-                            <input type="password" placeholder="Password" value={this.state.password} onChange={this.update("password")} />
+                            <input type="password" placeholder="Password (at least 8 characters you won't forget!" value={this.state.password} onChange={this.update("password")} />
                             
                             <input type="submit" value="submit" />
                             <input className="submit-button" type="submit" onClick={() => this.props.demo(demoUser)} value="demo" />
+                            <h4> Please {this.props.formType} or {this.props.navLink} </h4>
                         </div>
                     </form>
                 </div>  
