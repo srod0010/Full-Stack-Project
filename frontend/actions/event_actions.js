@@ -7,3 +7,7 @@ export const receiveEvents = events => ({
     events
 })
 
+export const fetchEvents = () => dispatch => ({
+    APIUtil.fetchEvents()
+        .then(events => dispatch(receiveEvents(events)))
+})
