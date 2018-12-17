@@ -83,9 +83,9 @@ class sessionForm extends React.Component {
                             
                             <input type="password" placeholder="Password (at least 8 characters you won't forget!" value={this.state.password} onChange={this.update("password")} />
                             
-                            <input type="submit" value="submit" />
-                            <input className="submit-button" type="submit" onClick={() => this.props.demo(demoUser)} value="demo" />
-                            <h4> Please {this.props.formType} or {this.props.navLink} </h4>
+                            <input className="signup-submit"type="submit" value="Let's get dinner!" />
+                            <input className="signup-submit demo" type="submit" onClick={() => this.props.demo(demoUser)} value="Demo Login" />
+                            <h4> {this.props.navLink} </h4>
                         </div>
                     </form>
                 </div>  
