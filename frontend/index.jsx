@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         store = configureStore();
     }
     window.getState = store.getState;
+    window.dispatch = store.dispatch;
     window.fetchEvents = fetchEvents;
     window.createEvent = createEvent;
     const root = document.getElementById('root');
