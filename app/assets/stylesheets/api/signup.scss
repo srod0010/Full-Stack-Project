@@ -2,13 +2,13 @@
     border: 1px solid blue;
     height: 100%;
     width: 100%;
-    background-color: #F3ECCE;
+    background-color: #faf6e8;
 }
 
 .signup-form {
     width: 980px;
-    padding: 50px 20px;
-    border: 1px solid green;
+    padding: 0 20px;
+    // border: 1px solid green;
     margin: 0 auto;
 }
 
@@ -20,7 +20,7 @@
 input {
     width: 646px;
     height: 56px;
-    margin: 20px auto;
+    margin: 10px auto;
     line-height: 1.7;
     font-size: 18px;
     padding-left: 20px;
@@ -47,3 +47,24 @@ h4 {
     background-color: #397bc7;
 }
 
+.errors {
+    // border: 1px solid black;
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    top: -20px;
+}
+
+.signup-description {
+    // border: 1px solid black;
+    text-align: left;
+    color: black;
+    line-height: 1.625;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+h2 {
+    color: #c93c10;
+    font-weight: 900;
+}

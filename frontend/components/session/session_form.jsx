@@ -72,9 +72,12 @@ class sessionForm extends React.Component {
         )} else{
             return (
                 <div className="signup-wrapper">
+                    <h5 className="errors">{this.renderErrors()}</h5>
                     <form onSubmit={this.handleSubmit} className="signup-form">
                         <div className="signup-fields">
-                            {this.renderErrors()}
+                            <h2>Join us for a meal</h2>
+                            <h4 className="signup-description">1000s of people around the world are discovering the joy of new meals and conversations with strangers</h4>
+                            
                             <input type="text" placeholder="Username" value={this.state.username} onChange={this.update("username")} />
                             
                             <input type="text" placeholder="Email Address" value={this.state.email} onChange={this.update("email")} />
