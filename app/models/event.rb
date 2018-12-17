@@ -16,5 +16,5 @@
 
 class Event < ApplicationRecord
     validates :name, :host_id, :description, :location, :city, :date, presence: true
-    validates :open, inclusion: { in: [true, false] } 
+    validates :open, inclusion: { in: [true, false] }, presence: true
 end
