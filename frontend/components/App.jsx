@@ -2,6 +2,7 @@ import React from 'react';
 import GreetingContainer from './greeting/greeting_container';
 import LoginContainer from './session/login_form_container';
 import SignupContainer from './session/signup_form_container';
+import EventIndexContainer from './events/event_index_container';
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashComponent from './splash/splash';
@@ -18,6 +19,7 @@ const App = () => (
         <Switch>
             <AuthRoute exact path="/login" component={LoginContainer} />
             <AuthRoute exact path="/signup" component={SignupContainer} />
+            <Route exact path="/events" component={EventIndexContainer} />
             <Route path="/" component={SplashComponent} />
         </Switch>
     </div>
