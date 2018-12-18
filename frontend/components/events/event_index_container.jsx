@@ -6,10 +6,11 @@ import {fetchEvents} from '../../actions/event_actions';
 
 
 const mapStateToProps = state => ({
+    events: Object.values(state.entities.events)
 })
 
 const mapDispatchToProps = dispatch => ({
-    fetchEvents = () => dispatch(fetchEvents())
+    fetchEvents: () => dispatch(fetchEvents())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventIndex);
