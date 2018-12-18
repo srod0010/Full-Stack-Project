@@ -10,5 +10,5 @@ class EventIndex extends React.Component {
         this.props.fetchEvents();
     }
 
-    
+    render() {}
 }
