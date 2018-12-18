@@ -18,6 +18,11 @@ class User < ApplicationRecord
     validates :password, length: { minimum: 8, allow_nil: true }
     after_initialize :ensure_session_token
     attr_reader :password
+
+    has_many :hosted_events,
+        primary_key: :id,
+        foreign_key: :host_id,
+        class_name: :Event
     
     def self.find_user_by_credentials(username, password)
         user = User.find_by(username: username)
