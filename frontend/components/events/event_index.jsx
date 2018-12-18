@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import EventIndexItem from './event_index_item';
+import CreateEventFormContainer from './create_event_form_container';
 
 class EventIndex extends React.Component {
     constructor(props) {
@@ -21,6 +22,7 @@ class EventIndex extends React.Component {
                 <ul>
                     {eventItems}
                 </ul>
+                {/* <CreateEventFormContainer /> */}
             </div>
         )
     }
