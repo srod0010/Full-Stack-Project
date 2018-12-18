@@ -6,6 +6,10 @@ class Api::EventsController < ApplicationController
         render 'api/events/index'
     end
 
+    def show
+        @event = Event.find(params[:id])
+    end
+
     def create
         @event = Event.new(event_params)
         @event.host_id = current_user.id
@@ -15,6 +19,13 @@ class Api::EventsController < ApplicationController
         else
             render json: @event.errors.full_messages, status: 422
         end
+    end
+
+    def update
+
+    end
+
+    def destroy
     end
 
 
