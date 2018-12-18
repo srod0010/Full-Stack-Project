@@ -6,6 +6,7 @@ import EventIndexContainer from './events/event_index_container';
 import { Route, Redirect, Switch, Link, HashRouter } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashComponent from './splash/splash';
+import CreateEventFormContainer from './events/create_event_form_container';
 
 
 const App = () => (
@@ -20,6 +21,8 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginContainer} />
             <AuthRoute exact path="/signup" component={SignupContainer} />
             <Route exact path="/events" component={EventIndexContainer} />
+            {/* <Route exact path="/events/:eventId" component={EventShowContainer} /> */}
+            <Route path="/events/new" component={CreateEventFormContainer} />
             <Route path="/" component={SplashComponent} />
         </Switch>
     </div>
