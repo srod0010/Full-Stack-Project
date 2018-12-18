@@ -8,6 +8,15 @@ export const fetchEvents = () => {
     )
 }
 
+export const fetchEvent = id => {
+    return (
+        $.ajax({
+            method: 'GET',
+            url: `api/events/${id}`
+        })
+    )
+}
+
 
 export const createEvent = event => {
     return (
