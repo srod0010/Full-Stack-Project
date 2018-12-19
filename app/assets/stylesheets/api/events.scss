@@ -22,13 +22,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .events-img-text {
     width: 30%;
     height: 50%;
-    border: 1px solid white;
-    position: absolute;
-    top: 150px;
-    
+    // border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }
