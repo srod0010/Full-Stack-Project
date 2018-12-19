@@ -28,21 +28,34 @@ class EventForm extends React.Component {
   render () {
       console.log(this.state)
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input type="text" placeholder="Event Title" value={this.state.name} onChange={this.update('name')} />
-          <input type="text" placeholder="Description" value={this.state.description} onChange={this.update('description')} />
-          <input type="text" placeholder="Location" value={this.state.location} onChange={this.update('location')} />
-          <input type="text" placeholder="City" value={this.state.city} onChange={this.update('city')} />
-          <input type="datetime-local" placeholder="Date" value={this.state.date} onChange={this.update('date')} />
-          <select value={this.state.open} onChange={this.update('open')}>
-            <option selected value="" disabled>OPEN?</option>
-            <option value="true"> True </option>
-            <option value="false"> False</option>
-          </select>
-          <br/>
-          <input type="submit" value="submit"/>
-        </form>
+      <div className="form-page-wrapper">
+        <div className="event-form-wrapper">
+          <form onSubmit={this.handleSubmit}>
+            <h1 id="create-header">Host an event!</h1>
+        
+            <input className="form-inputs" type="text" placeholder="Event Title" value={this.state.name} onChange={this.update('name')} />
+            <br/>
+            <input className="form-inputs" type="text" placeholder="Description" value={this.state.description} onChange={this.update('description')} />
+            <br/>
+            <input className="form-inputs" type="text" placeholder="Address" value={this.state.location} onChange={this.update('location')} />
+            <br/>
+            <input className="form-inputs" type="datetime-local" placeholder="Date" value={this.state.date} onChange={this.update('date')} />
+            <br/>
+            <select className="create-dropdown" value={this.state.city} onChange={this.update('city')}>
+              <option selected value="" disabled>City</option>
+              <option value="San Francisco">San Francisco</option>
+              <option value="New York">New York</option>
+            </select>
+            <select className="create-dropdown" value={this.state.open} onChange={this.update('open')}>
+              <option selected value="" disabled>OPEN?</option>
+              <option value="true"> True </option>
+              <option value="false"> False</option>
+            </select>
+            <br/>
+            <input className="create-event-submit" type="submit" value="submit"/>
+            
+          </form>
+        </div>
       </div>
     );
   }

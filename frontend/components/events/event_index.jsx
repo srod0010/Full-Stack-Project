@@ -17,6 +17,7 @@ class EventIndex extends React.Component {
             return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} />
         })
 
+
         return(
             <div className="events-wrapper">
 
