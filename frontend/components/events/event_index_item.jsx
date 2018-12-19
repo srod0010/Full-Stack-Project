@@ -1,8 +1,8 @@
 import React from 'react';
 
 const eventIndexItem = (props) => (
-    <div>
-        <h1>{props.event.name}</h1>
+    <div className="event-wrap">
+        <h1 className="event-header">{props.event.name}</h1>
         <ul>
             <li>{props.event.description}</li>
             <li>{props.event.location}</li>
