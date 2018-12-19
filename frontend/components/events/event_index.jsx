@@ -18,11 +18,20 @@ class EventIndex extends React.Component {
         })
 
         return(
-            <div>
+            <div className="events-wrapper">
+
+                <div className="events-img">
+                    <div className="events-img-cover"></div>
+                    <div className="events-img-text">
+                        <h1>Good meals</h1>
+                        <h3>Are hard to make</h3>
+                    </div>
+                </div>
+                
                 <ul>
                     {eventItems}
                 </ul>
-                {/* <CreateEventFormContainer /> */}
+                
             </div>
         )
     }
