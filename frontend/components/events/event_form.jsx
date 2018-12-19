@@ -34,9 +34,13 @@ class EventForm extends React.Component {
           <input type="text" placeholder="Description" value={this.state.description} onChange={this.update('description')} />
           <input type="text" placeholder="Location" value={this.state.location} onChange={this.update('location')} />
           <input type="text" placeholder="City" value={this.state.city} onChange={this.update('city')} />
-          <input type="text" placeholder="Date" value={this.state.date} onChange={this.update('date')} />
-          <input type="text" placeholder="Open" value={this.state.open} onChange={this.update('open')} />
-          {/* <textarea type="text" value={this.state.body} onChange={this.update('body')} /> */}
+          <input type="datetime-local" placeholder="Date" value={this.state.date} onChange={this.update('date')} />
+          <select value={this.state.open} onChange={this.update('open')}>
+            <option selected value="" disabled>OPEN?</option>
+            <option value="true"> True </option>
+            <option value="false"> False</option>
+          </select>
+          <br/>
           <input type="submit" value="submit"/>
         </form>
       </div>
