@@ -4,13 +4,13 @@ class EventForm extends React.Component {
   constructor(props) {
     super(props);
     console.log(this.props.event);
-    this.state = this.props.event || { name: '', description: '', location: '', city: '', date: '', open: '' };
+    this.state = this.props.event || {};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.props.event && !this.state.id) {
+    if (this.props.event && !this.state) {
       let newEvent = Object.assign({},this.props.event);
       this.setState(newEvent);
     }
