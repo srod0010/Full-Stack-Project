@@ -12,7 +12,7 @@
     height: 80px;
     // padding-left: 150px;
     font-family: "Nanum Pen Script";
-    color: white;
+    // color: white;
     // border: 2px solid black;
     // display: flex;
     // justify-content: space-between;
@@ -74,8 +74,8 @@
 .header-group {
     display: flex;
     justify-content: space-between;
-    border-style: solid;
-    border-color: white;
+    // border-style: solid;
+    // border-color: white;
     height: 100%;
     width: 30%;
 }
@@ -107,6 +107,22 @@
     // border: 1px solid white;
     font-size: 27px;
 }
+
+.header-button.logout:hover {
+    background-color: rgb(244, 182, 66);
+    color: white;
+    border: 1px solid white;
+    font-size: 14px;
+}
+
+// .logout-button {
+//     background-color: rgb(244, 182, 66);
+//     color: white;
+//     width: 100px;
+//     height: 30px;
+//     color: black;
+
+// }
 
 .sign-up-button:hover {
     background-color: white;
