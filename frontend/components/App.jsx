@@ -14,9 +14,7 @@ const App = () => (
     <div className="home-page">
         <header className="main-nav">
             <div className="nav-container">
-   
-                 <Link className="logo" to="/"><h1> 🍛 Meals With Strangers</h1></Link>
-
+                <Link className="logo" to="/"><h1> 🍛 Meals With Strangers</h1></Link>
                 <GreetingContainer />
             </div>
             

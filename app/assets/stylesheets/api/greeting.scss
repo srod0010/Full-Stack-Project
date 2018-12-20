@@ -23,7 +23,7 @@
 .nav-container {
     width: 1050px;
     height: 100%;
-    border: 1px solid red;
+    // border: 1px solid red;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -55,9 +55,20 @@
     background: white;
     border-radius: 6px;
     font-size: 16px;
+
 }
 
+.sign-up-button {
+    text-decoration-line: none;
+    color: black;
+    font-family: "Nanum Pen Script";
+    font-size: 22px;
+    font-weight: bold;
+}
 
+.login-signup {
+    padding-top: 20px;
+}
 
 
 .header-group {
@@ -80,12 +91,27 @@
     height: 30px;
     width: 100px;
     margin-top: 20px;
-    border: 1px solid black;
+    // border: 1px solid black;
+}
+
+.header-button.nav {
+    text-decoration-line: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .header-button:hover {
     background-color: rgb(244, 182, 66);
     color: white;
+    // border: 1px solid white;
+    font-size: 27px;
+}
+
+.sign-up-button:hover {
+    background-color: white;
+    color: black;
+    font-size: 25px;
     border: 1px solid white;
 }
 

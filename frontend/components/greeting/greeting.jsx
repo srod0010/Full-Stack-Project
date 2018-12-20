@@ -6,12 +6,11 @@ const Greeting = ({ currentUser, logout }) => {
         <nav className="login-signup">
             <Link className="header-button nav" to="/events">Events</Link>
             <Link className="header-button nav" to="/events/new">Host</Link>
-            <button className="greeting-button">
-                <Link to="/login">Login</Link>
-            </button>
+            
+            <Link className="header-button nav" to="/login">Login</Link>
             
             <button className="greeting-button-signup">
-                <Link to="/signup">Sign up!</Link>
+                <Link className="sign-up-button"to="/signup">Sign up!</Link>
             </button>
            
             
