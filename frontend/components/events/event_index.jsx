@@ -25,11 +25,11 @@ class EventIndex extends React.Component {
         })
 
         let sfEvents = sf.map(event => {
-            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} />
+            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent}/>
         })
 
         let nyEvents = ny.map(event => {
-            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} />
+            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent}/>
         })
 
         
