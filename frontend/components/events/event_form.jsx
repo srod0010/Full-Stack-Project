@@ -1,4 +1,5 @@
 import React from 'react';
+import {withRouter} from 'react-router-dom';
 
 class EventForm extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class EventForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    return this.props.action(this.state);
+    return this.props.action(this.state).then(() => this.props.history.push('/events'));
   }
 
   render () {
@@ -61,4 +62,4 @@ class EventForm extends React.Component {
   }
 }
 
-export default EventForm;
+export default withRouter(EventForm);
