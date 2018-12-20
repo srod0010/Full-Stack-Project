@@ -13,8 +13,11 @@ import EditEventFormContainer from './events/edit_event_form_container';
 const App = () => (
     <div className="home-page">
         <header className="main-nav">
-            <Link className="logo" to="/"><h1>Meals With Strangers</h1></Link>
-            <GreetingContainer />
+            <div className="nav-container">
+                <Link className="logo" to="/"><h1>Meals With Strangers</h1></Link>
+                <GreetingContainer />
+            </div>
+            
         </header>
         
 
