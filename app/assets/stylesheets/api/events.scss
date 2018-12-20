@@ -29,12 +29,36 @@
 
 .event-wrap {
     height: 250px;
-    width: 300px;
+    width: 230px;
     border: 1px solid red;
+}
+
+.event-wrap.city {
+    margin: 15px 0px 0px 15px;
+    
 }
 
 .event-header {
     text-align: center;
     font-size: 18px;
     border-bottom: 1px solid black;
+}
+
+.city-events-container {
+    display: flex;
+}
+
+.city-events-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.city-title-header {
+    margin-top: 40%;
+    padding-left: 30px;
+    font-size: 20px;
+    height: 60px;
+    width: 150px;
+    // position: relative;
+    text-align: center;
 }
