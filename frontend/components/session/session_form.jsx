@@ -72,7 +72,7 @@ class sessionForm extends React.Component {
         )} else{
             return (
                 <div className="signup-wrapper">
-                    <h5 className="errors">{this.renderErrors()}</h5>
+                    {this.renderErrors()}
                     <form onSubmit={this.handleSubmit} className="signup-form">
                         <div className="signup-fields">
                             <h2>Join us for a meal</h2>

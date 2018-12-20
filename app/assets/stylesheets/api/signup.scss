@@ -47,12 +47,14 @@ h4 {
     background-color: #397bc7;
 }
 
-.errors {
+
+.errors li {
     // border: 1px solid black;
     display: inline-block;
-    width: 300px;
+    width: 200px;
+    height: 10px;
     position: relative;
-    top: -20px;
+    // top: 5px;
 }
 
 .signup-description {
