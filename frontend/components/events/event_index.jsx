@@ -13,10 +13,26 @@ class EventIndex extends React.Component {
     }
 
     render() {
-        let eventItems = this.props.events.map(event => {
+        // let eventItems = this.props.events.map(event => {
+        //     return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} />
+        // })
+
+        let sf = this.props.events.filter(event => {
+            return event.city === 'San Francisco'
+        })
+        let ny = this.props.events.filter(event => {
+            return event.city === 'New York'
+        })
+
+        let sfEvents = sf.map(event => {
             return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} />
         })
 
+        let nyEvents = ny.map(event => {
+            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} />
+        })
+
+        
 
         return(
             <div className="events-wrapper">
@@ -28,11 +44,16 @@ class EventIndex extends React.Component {
                             <h3>Having a good time with strangers is not</h3>
                         </div>
                     </div>
+                   
 
                 </div>
                 
                 <ul>
-                    {eventItems}
+                    {sfEvents}
+                </ul>
+
+                <ul>
+                    {nyEvents}
                 </ul>
                 
             </div>
