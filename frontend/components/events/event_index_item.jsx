@@ -1,5 +1,6 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
+
 
 const eventIndexItem = (props) => (
     <div className="event-wrap">
@@ -11,6 +12,7 @@ const eventIndexItem = (props) => (
             <li>{props.event.city}</li>
             <button onClick={() => props.deleteEvent(props.event.id)}>Delete</button>
             <button onClick={() => props.history.push(`/events/${props.event.id}/edit`)}>Edit</button>
+            <Link to={`/events/${props.event.id}`}>show</Link>
         </ul>
     </div>
 )

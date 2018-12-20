@@ -8,6 +8,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import SplashComponent from './splash/splash';
 import CreateEventFormContainer from './events/create_event_form_container';
 import EditEventFormContainer from './events/edit_event_form_container';
+import EventShowContainer from './events/event_show_container';
 
 
 const App = () => (
@@ -27,6 +28,7 @@ const App = () => (
             <Route exact path="/events" component={EventIndexContainer} />
             <Route exact path="/events/:eventId/edit" component={EditEventFormContainer} />
             <Route path="/events/new" component={CreateEventFormContainer} />
+            <Route exact path="/events/:eventId" component={EventShowContainer} />
             <Route path="/" component={SplashComponent} />
         </Switch>
     </div>
