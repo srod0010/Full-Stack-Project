@@ -25,6 +25,18 @@
     text-align: center;
 }
 
+.events-img-text {
+    color: white;
+     position: absolute;
+     top: 30%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+}
+
+.events-img-text h3{
+    text-align: center;
+}
 
 
 .event-wrap {

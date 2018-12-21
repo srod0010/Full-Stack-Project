@@ -13,11 +13,23 @@ class EventShow extends React.Component {
             return (<div> Theres no event</div>);
         }
         return (
-            <div>
-                
-                   {/* <li>{console.log(event.name)}</li> */}
-                   <li>{event.name}</li>
-                    <h1>hey</h1>
+            <div className="show-container">
+                <div className="show-content-container">
+                    <div className="left-show">
+                        <div className="left-first">
+                            <li>{event.name}</li>
+                        </div>
+
+                        <div className="show-signup">
+                            
+                        </div>
+                    </div>
+
+                    <div className="right-show">
+                        <li>{event.city}</li>
+                    </div>
+                    
+                </div>
             </div>
         );
     }

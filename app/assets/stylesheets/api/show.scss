@@ -1,0 +1,25 @@
+.show-container {
+    width: 100%; 
+    height: 100%;
+    background-color: #faf6e8;
+}
+
+
+.show-content-container {
+    width: 1020px;
+    height: 800px;
+    border: 1px solid blue;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-show {
+    margin: 15px 15px;
+}
+
+.left-first {
+    width: 320px;
+    height: 360px;
+    border: 1px solid black;
+}

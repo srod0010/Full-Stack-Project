@@ -3,6 +3,7 @@ import {withRouter, Link} from 'react-router-dom';
 
 
 const eventIndexItem = (props) => (
+    
     <div className="event-wrap">
         <h1 className="event-header">Join us for: {props.event.name}</h1>
         <ul>
