@@ -66,7 +66,12 @@ However, it may bring you comfort to know a little something about your Host. If
                     </div>
 
                     <div className="right-show">
-                        <li>{event.city}</li>
+                        <h2 className="meet-host">Get dinner with us!</h2>
+                        <h3>We won't be strangers much longer!</h3>
+                        <h3>(Look for the "Meals With Strangers" sign)</h3>
+                        <div className="host-pic-container">
+                            <div className="host-img"></div>
+                        </div>
                     </div>
                     
                 </div>

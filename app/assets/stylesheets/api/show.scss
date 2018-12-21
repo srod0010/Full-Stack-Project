@@ -8,7 +8,7 @@
 .show-content-container {
     width: 1020px;
     height: 100%px;
-    border: 1px solid blue;
+    // border: 1px solid blue;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -60,7 +60,7 @@
 .left-third {
     width: 320px;
     height: 450px;
-    border: 1px solid black;
+    border: 1px solid #f1e9c6;
     margin-top: 20px;
     background-color: #f1e9c6;
 }
@@ -96,8 +96,28 @@
     font-weight: 900;
 }
 
+.meet-host {
+    position: relative;
+    width: 200px;
+    left: 20px;
+}
+
 .right-show {
     width: 640px;
     height: 465px;
+    margin-top: 15px;
 }
+
+.host-pic-container {
+    width: 300px;
+    height: 400px;
+    // border: 1px solid black;
+    position: relative;
+    left: 50px;
+    background-image: url('http://cdn.onlinewebfonts.com/svg/img_504579.png');
+    background-size: 50% 50%;
+
+}
+
+
 
