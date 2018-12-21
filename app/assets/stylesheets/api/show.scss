@@ -21,15 +21,68 @@
 .left-first {
     width: 320px;
     height: 360px;
-    border: 1px solid black;
+    border: 1px solid white;
+    background-color: white; 
 }
+
+.left-first-inner {
+    width: 250px;
+    height: 300px;
+    // border: 1px solid black;
+    margin: 30px auto;
+}
+
+.event-name {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #EF6236;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 230px;
+    height: 40px;
+    border-bottom: 1px solid gray;
+    overflow: scroll;
+    padding-bottom: 3px;
+    
+}
+
+.left-date {
+    margin: 10px 10px;
+}
+
+// .left-share {
+//     font-size: 10px;
+//     font-weight: light;
+//     display: inline;
+// }
 
 .left-third {
     width: 320px;
-    height: 500px;
+    height: 450px;
     border: 1px solid black;
     margin-top: 20px;
-    
+    background-color: #f1e9c6;
+}
+
+.third-header {
+    text-align: center;
+    color: orangered;
+    border-bottom: 1px solid red;
+    border-block-start: 50px;
+}
+
+.show-p {
+    width: 275px;
+    margin: 0 auto;
+    color: #eda20b;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.show-last-pointer {
+    position: relative;
+    left: 110px;
 }
 
 .show-signup {
