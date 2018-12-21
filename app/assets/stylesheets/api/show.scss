@@ -9,7 +9,6 @@
     width: 1020px;
     height: 800px;
     border: 1px solid blue;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
@@ -22,4 +21,15 @@
     width: 320px;
     height: 360px;
     border: 1px solid black;
+}
+
+.show-signup {
+    width: 320px;
+    height: 80px;
+    background-color: #EF6236;
+    border-radius: 20px;
+    margin-top: 15px;
+    font-size: 18px;
+    color: white;
+    font-weight: 900;
 }
