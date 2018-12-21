@@ -19,10 +19,15 @@ class EventShow extends React.Component {
                         <div className="left-first">
                             <li>{event.name}</li>
                         </div>
+
                         <div className="left-second">
                             <button className="show-signup" onClick={() => this.props.history.push('/signup')}>
                                 Sign Me Up
                             </button>
+                        </div>
+
+                        <div className="left-third">
+                            
                         </div>
                     </div>
 

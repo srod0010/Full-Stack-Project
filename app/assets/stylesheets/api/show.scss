@@ -7,8 +7,9 @@
 
 .show-content-container {
     width: 1020px;
-    height: 800px;
+    height: 100%px;
     border: 1px solid blue;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
@@ -23,9 +24,17 @@
     border: 1px solid black;
 }
 
+.left-third {
+    width: 320px;
+    height: 500px;
+    border: 1px solid black;
+    margin-top: 20px;
+    
+}
+
 .show-signup {
     width: 320px;
-    height: 80px;
+    height: 70px;
     background-color: #EF6236;
     border-radius: 20px;
     margin-top: 15px;
@@ -33,3 +42,9 @@
     color: white;
     font-weight: 900;
 }
+
+.right-show {
+    width: 640px;
+    height: 465px;
+}
+
