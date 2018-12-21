@@ -72,6 +72,9 @@ However, it may bring you comfort to know a little something about your Host. If
                         <div className="host-pic-container">
                             <div className="host-img"></div>
                         </div>
+                        <div className="host-information">
+                            
+                        </div>
                     </div>
                     
                 </div>

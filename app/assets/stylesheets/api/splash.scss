@@ -35,6 +35,27 @@
    
 }
 
+.splash-signup {
+    position: relative;
+    left: 190px;
+    // border: 1px solid black;
+    background-color: #EF6236;
+    border-radius: 20px;
+    height: 60px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.splash-signup a{
+    text-decoration-line: none;
+    color: white;
+    font-size: 25px;
+}
+
+
 .outer-text {
     color: white;
     font-weight: bold;

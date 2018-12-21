@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const splashComponent = () => {
     return(
@@ -11,6 +12,12 @@ const splashComponent = () => {
             <div className="pic-text">
                 <h1 className="outer-text">New Restaurant You've Been Itching To Try?</h1>
                 <h2 className="inner-text">Grab a Meal With Strangers</h2>
+                <div className="splash-signup">
+                    <Link to="/signup">
+                        Lets Eat!
+                    </Link>
+
+                </div>
             </div>
 
             <div className="banner">
