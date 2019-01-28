@@ -21,10 +21,10 @@
 }
 
 .nav-container {
-    width: 1050px;
+    max-width: 1020px;
     height: 100%;
     // border: 1px solid red;
-    margin: 0 auto;
+    margin: auto auto;
     display: flex;
     justify-content: space-between;
 }
@@ -58,16 +58,27 @@
 
 }
 
+.greeting-button-signup:hover {
+    height: 40px;
+    width: 100px;
+    background: rgb(244, 182, 66);
+    border-radius: 6px;
+    border: 2px solid #FEFEFE;
+    font-size: 16px;
+
+}
+
 .sign-up-button {
     text-decoration-line: none;
     color: black;
     font-family: "Nanum Pen Script";
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: 900;
+    color: rgb(244, 182, 66);
 }
 
 .login-signup {
-    padding-top: 20px;
+    margin: auto auto;
 }
 
 
@@ -98,14 +109,14 @@
     text-decoration-line: none;
     color: white;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .header-button:hover {
     background-color: rgb(244, 182, 66);
     color: white;
     // border: 1px solid white;
-    font-size: 27px;
+    font-size: 20px;
 }
 
 .header-button.logout:hover {
@@ -125,10 +136,10 @@
 // }
 
 .sign-up-button:hover {
-    background-color: white;
-    color: black;
-    font-size: 25px;
-    border: 1px solid white;
+    // background-color: white;
+    color: white;
+    font-size: 15px;
+    // border: 1px solid white;
 }
 
 .logo{
