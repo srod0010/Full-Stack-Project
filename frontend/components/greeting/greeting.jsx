@@ -10,7 +10,7 @@ const Greeting = ({ currentUser, logout }) => {
             <Link className="header-button nav" to="/login">Login</Link>
             
             <button className="greeting-button-signup">
-                <Link className="sign-up-button"to="/signup">Sign up!</Link>
+                <Link className="sign-up-button"to="/signup">SIGN UP</Link>
             </button>
            
             
