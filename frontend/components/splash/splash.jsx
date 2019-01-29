@@ -141,6 +141,15 @@ const splashComponent = () => {
             </div>
           </div>
         </div>
+
+        <div className="greeting-content-banner">
+          <div className="banner-inner-box">
+            <h1>Do we get to high five yet?</h1>
+            <Link className="YES" to="/events">
+              YES
+            </Link>
+          </div>
+        </div>
       </div>;
 }
 
