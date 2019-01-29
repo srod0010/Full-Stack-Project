@@ -47,7 +47,7 @@ const splashComponent = () => {
               <div className="greeting-writing weird">
                 <h2>Its weird.</h2>
                 <p>
-                  Everyone at tea time is stepping a little out of their
+                  Everyone at meal time is stepping a little out of their
                   comfort zone. This makes it so much easier to actually
                   learn something unexpected about the people around you.
                   Because open minds are a prerequisite around here.
@@ -75,7 +75,7 @@ const splashComponent = () => {
                 <h2>Your hands are made for high fiving!</h2>
                 <p>
                   And your eyes are made…for eye contact! Real humans are so
-                  much cooler than their tweets or Instagram pictures. Tea
+                  much cooler than their tweets or Instagram pictures. Meal
                   time has real humans! #nofilter!
                 </p>
               </div>
@@ -87,7 +87,7 @@ const splashComponent = () => {
           <div className="banner-inner-box">
             <h1>Actually talk to people.</h1>
             <Link className="YES" to="/events">
-              Let's Get Tea
+              Let's Get A Meal
             </Link>
           </div>
         </div>
@@ -150,6 +150,44 @@ const splashComponent = () => {
             </Link>
           </div>
         </div>
+
+        <footer className="home-footer">
+          <div className="list">
+            <div className="list-position">
+              <a className="no-cursor" href="#">
+                About
+              </a>
+              <Link to="/events">Meal Times</Link>
+              <a className="no-cursor" href="#">Facebook</a>
+                <a href="https://www.linkedin.com/in/sfrodrigues/">
+                LinkedIn
+              </a>
+              <br />
+              <a className="no-cursor" href="#">
+                Terms of Service
+              </a>
+              <a className="no-cursor" href="#">
+                Privacy Policy
+              </a>
+            </div>
+          </div>
+          <div className="aboutus">
+            <p>
+              Meals With Strangers is all about making our cities feel more
+              like neighborhoods. We're more "connected" than ever before,
+              but we're also more alone. And all we want to do is bring
+              people together because, well, the world is better that way.
+            </p>
+            <p>
+              We're not doing anything groundbreaking. We're creating
+              something that would've been incredibly unnecessary 20 years
+              ago. But while we get busier, it's easy to forget the value of
+              a conversation for no reason. A conversation that's
+              intentionally unintentional.
+
+            </p>
+          </div>
+        </footer>
       </div>;
 }
 
