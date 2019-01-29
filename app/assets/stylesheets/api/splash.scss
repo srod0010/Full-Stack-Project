@@ -154,14 +154,14 @@
 .greeting-wrapper {
     width: 100%;
     // border: 1px solid red;
-    height: 600px;
+    height: 100%;
 }
 
 .greeting-body {
-    width: 60%;
+    width: 59%;
     height: 100%;
     // border: 1px solid red;
-    margin: 0 auto;
+    margin: 0 auto 2em auto;
     display: flex;
     flex-direction: column;
 }
@@ -180,30 +180,52 @@
     
 }
 
-.greeting-first {
+.greeting-row {
     display: flex;
     justify-content: space-around;
     align-content: center;
+    height: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
-.greeting-first-img {
-    background-image: url(http://dcu7hky3kqbj1.cloudfront.net/assets/landing/realpeople-1d5fb20324228744e992569f082415977c4b3799ef7b14cc5922c2dade18f97c.png);
+.greeting-img {
+    // background-image: url(http://dcu7hky3kqbj1.cloudfront.net/assets/landing/realpeople-1d5fb20324228744e992569f082415977c4b3799ef7b14cc5922c2dade18f97c.png);
     background-size: 100% 100%;
     width: 313px;
     height: 337px;
     // border: 1px solid red;
 }
 
+.greeting-img.first {
+    background-image: url(http://dcu7hky3kqbj1.cloudfront.net/assets/landing/realpeople-1d5fb20324228744e992569f082415977c4b3799ef7b14cc5922c2dade18f97c.png);
+}
+
+.greeting-img.second {
+    background-image: url(http://dcu7hky3kqbj1.cloudfront.net/assets/landing/nevermeet-55361a98c59cda3fced04c6234e80553c4ed3858c1028008e6fa3642185d57b9.png);
+    height: 219px;
+}
+
+.greeting-img.third {
+    background-image: url(http://dcu7hky3kqbj1.cloudfront.net/assets/landing/highfive-e7a173c8a773070abd084deeac2eb53919a70990425599ed5e7164dc143d45c6.png);
+    height: 274px;
+}
+
+
 .greeting-writing {
     display: flex;
     flex-direction: column;
     vertical-align: top;
     height: 220px;
-        margin: 60px 0 0;
-        margin-top: 60px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
+        // padding: 60px 0;
+}
+
+.greeting-writing.weird {
+    margin: 60px 0 0;
+    margin-top: 60px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
 }
 
 .greeting-writing h2 {
