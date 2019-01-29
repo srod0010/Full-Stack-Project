@@ -218,7 +218,8 @@
 }
 .greeting-img.fifth {
     background-image: url(http://dcu7hky3kqbj1.cloudfront.net/assets/landing/campfire-eae12c98731c5564dcd309eb8e2fc0af48a7b023b677deae69fa309eb3db44d4.png);
-    height: 274px;
+    height: 323px;
+    width: 354px;
 }
 
 
@@ -227,6 +228,7 @@
     flex-direction: column;
     vertical-align: top;
     height: 220px;
+    
         // padding: 60px 0;
 }
 
@@ -237,7 +239,8 @@
     flex-direction: column;
     vertical-align: top;
     height: 100%;
-    
+    margin-top: -40px;
+    // margin-bottom: -300px;
         // padding: 60px 0;
 }
 
@@ -260,6 +263,7 @@
     line-height: 1.25;
     font-weight: 600;
     vertical-align: text-top;
+    margin-bottom: -7px;
 }
 
 .greeting-writing p {
@@ -272,6 +276,7 @@
     sans-serif;
     font-size: 18px;
     line-height: 1.625;
+    margin-bottom: -3px;
 }
 
 /// greeting banner w/button

@@ -94,21 +94,14 @@ const splashComponent = () => {
 
         <div className="greeting-wrapper">
           <div className="greeting-body">
-
             <div className="greeting-quotes">
               <div className="blockquotes-wrap">
-                "I met people who I continue to be in touch with almost a year 
-                later, and people who I shared delightful conversations 
-                with that day but no more. Both are their own kind of fun."
-                 <span className="source">
-                  Freia, NYC
-                </span>
+                "I met people who I continue to be in touch with almost a year later, and people who I shared delightful conversations with that day but no more. Both are their own kind of fun."
+                <span className="source">Freia, NYC</span>
               </div>
               <div className="blockquotes-wrap">
-                "I’m not the type of person who talks to strangers. This
-                        doesn’t mean I don’t want to. Tea With Strangers just makes
-                        it easier because you know everyone there wants it too."  
-                <span className="source">  Molly, SF</span>
+                "I’m not the type of person who talks to strangers. This doesn’t mean I don’t want to. Tea With Strangers just makes it easier because you know everyone there wants it too."
+                <span className="source"> Molly, SF</span>
               </div>
             </div>
 
@@ -117,39 +110,35 @@ const splashComponent = () => {
             </div>
 
             <h3 className="greeting-bottom-header">
-              So why are thousands of people doing it?
+              THERE'S NO SUCH THING AS A STRANGER.
             </h3>
 
             <div className="greeting-row">
               <div className="greeting-img fifth" />
 
-              <div className="greeting-writing last">
-                <h2>We won't meet otherwise.</h2>
+              <div className="greeting-writing">
                 <p>
-                  In all likelihood, our paths won’t cross for any reason.
-                  So often, we only meet people through work, school, or
-                  friends of friends. And even then, it’s questionable. So
-                  basically, we manufacture serendipity
+                  You'd never think of yourself as a stranger. But everyone
+                  else does. You know your story. Your embarrassments. Your
+                  joy. Your idiocyncrasies — the thing that make you, you.
+                  But they don't.
                 </p>
                 <p>
-                  In all likelihood, our paths won’t cross for any reason.
-                  So often, we only meet people through work, school, or
-                  friends of friends. And even then, it’s questionable. So
-                  basically, we manufacture serendipity
+                  And everyone has these — whether or not we know what they
+                  are. Everyone around you is a person, loaded with stories
+                  that you can't even begin to fathom. They're different
+                  from yours, but the fact that we all have them is what
+                  brings us together.
                 </p>
                 <p>
-                  In all likelihood, our paths won’t cross for any reason.
-                  So often, we only meet people through work, school, or
-                  friends of friends. And even then, it’s questionable. So
-                  basically, we manufacture serendipity
+                  In a stranger's story, we might discover parts of our own.
+                  And in seeing where a stranger is coming from, we might
+                  realize they're actually not so strange. But we don't
+                  discover much just by thinking about it. So let's find
+                  out.
                 </p>
               </div>
             </div>
-
-            
-           
-            
-
           </div>
         </div>
       </div>;
