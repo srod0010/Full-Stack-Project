@@ -2,25 +2,31 @@ import React from 'react';
 import {withRouter, Link} from 'react-router-dom';
 
 
-const eventIndexItem = (props) => (
+const eventIndexItem = ({event}) => {
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let utcDate = new Date(event.date);
+    let utcDay = utcDate.getUTCDay();
 
-    <div className="event-wrap">
-        <h1 className="event-header">Join us for: {props.event.name}</h1>
-        <ul>
-            <div className="event-date">
-                <h3>{props.event.date}</h3>
-            </div>
-            <li>{props.event.description}</li>
-            <li>{props.event.location}</li>
-            <li>{props.event.city}</li>
-            <button onClick={() => props.deleteEvent(props.event.id)}>Delete</button>
-            <button onClick={() => props.history.push(`/events/${props.event.id}/edit`)}>Edit</button>
-            <Link to={`/events/${props.event.id}`}>show</Link>
-        </ul>
-        {/* <div className="event-info-pic">
-            <img src="https://cdn.dribbble.com/users/738700/screenshots/2689482/icon_city_02-02___.png" height="90" width="90"/>
-        </div> */}
-    </div>
-)
+    let displayDay = days[utcDay];
+    
+    return (
+        <div className="event-wrap">
+            <h3>{displayDay}</h3>
+            <h1 className="event-header">Join us for: {event.name}</h1>
+            <ul>
+                <div className="event-date">
+                    <h3>{event.date}</h3>
+                </div>
+                <li>{event.description}</li>
+                <li>{event.location}</li>
+                <li>{event.city}</li>
+                <button onClick={() => deleteEvent(event.id)}>Delete</button>
+                <button onClick={() => history.push(`/events/${event.id}/edit`)}>Edit</button>
+                <Link to={`/events/${event.id}`}>show</Link>
+            </ul>
+            
+        </div>
+    )
+}
 
 export default withRouter(eventIndexItem);

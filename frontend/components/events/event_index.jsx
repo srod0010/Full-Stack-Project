@@ -36,16 +36,15 @@ class EventIndex extends React.Component {
 
         return(
             <div className="events-wrapper">
-
-                <div className="events-img">
-                    <div className="events-img-cover">
+                <div className="events-pic">
+                    <div className="events-layer">
+                        <div className="events-pic-text">
+                            <h1 className="events-outer-text">
+                                GOOD CONVERSATIONS
+                            </h1>
+                            <h2 className="events-inner-text">They're hard to find</h2>
+                        </div>
                     </div>
-                    <div className="events-img-text">
-                        <h1>Good meals are hard to make</h1>
-                        <h3>Having a good time with strangers is not</h3>
-                    </div>
-                   
-
                 </div>
                 
                 <div className='city-events-container'>
