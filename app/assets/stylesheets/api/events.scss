@@ -5,33 +5,67 @@
 .events-wrapper {
     width: 100%;
     height: 100%;
-    border: 1px solid green;
+    // border: 1px solid green;
 }
 
-.events-img {
-    background-image: url(http://www.opentable.com/m/best-foodie-restaurants-in-canada/images/13f05befdee9c481378c4c1c7b10f3a3.jpg);
-    background-size: 100% 100%;
-    height: 500px;
-}
-
-.events-img-cover {
+.events-pic {
+    background-image: url(http://www.ox.ac.uk/sites/files/oxford/styles/ow_medium_feature/public/field/field_image_main/Meal%20banner.jpg?itok=t_iAg-1M);
+    // background-image: url(https://images.unsplash.com/photo-1524182576066-1bb979e25342?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80);
+    height: 270px;
     width: 100%;
-    height: 100%;
-    background-color:#f4ad42;
-    opacity: .50;
+    opacity: 1;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.events-layer {
+    background-color: rgba(244, 173, 66, .7);
+    // opacity: 0.7;
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 270px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
-.events-img-text {
+.events-pic-text {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.events-outer-text {
     color: white;
-     position: absolute;
-     top: 30%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; 
+    font-weight: bold;
+    font-style: normal;
+    margin: 9px auto;
+
+    //  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: "canada-type-gibson";
+    font-size: 40px;
+}
+
+.events-inner-text {
+    color: white;
+    // transform: translate(25%, 25%);
+    width: 700px;
+    // text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid red;
+    margin: 0 auto;
+    margin-bottom: 36px;
+    //  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .events-img-text h3{
@@ -82,12 +116,3 @@
     width: 70px;
     align-items: left;
 }
-// .event-info-pic {
-//     width: 2%;
-//     height: 2%;
-//     position: relative;
-//     bottom: 200px;
-//     left: 145px;
-    
-
-// }
