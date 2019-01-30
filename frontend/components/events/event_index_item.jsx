@@ -17,22 +17,25 @@ const eventIndexItem = ({event}) => {
 
     let displayDate = displayMonth + ' ' + utcDate; // feb 4
     let displayAddress = `${event.location}, ${event.city}, CA`;
+    let displayHour = `${utcHour}-${utcHour+2} PM`
 
     
     return (
         <div className="event-wrap">
-            <h5>{displayDay}</h5>
-            <h3>{displayDate}</h3>
-            <h3> Join us for: {event.name}</h3>
-            <ul>
+            <Link to={`/events/${event.id}`}>
+                <h5>{displayDay}</h5>
+                <h3>{displayDate}</h3>
+                <h3> Join us for: {event.name}</h3>
+                    
+                    {/* <h5>{event.description}</h5> */}
+                    <h4>{displayAddress}</h4>
+                    <h4>{displayHour}</h4>
+                    {/* <button onClick={() => deleteEvent(event.id)}>Delete</button>
+                    <button onClick={() => history.push(`/events/${event.id}/edit`)}>Edit</button> */}
+            
                 
-                {/* <h5>{event.description}</h5> */}
-                <h4>{displayAddress}</h4>
-                <h4>{utcHour}</h4>
-                <button onClick={() => deleteEvent(event.id)}>Delete</button>
-                <button onClick={() => history.push(`/events/${event.id}/edit`)}>Edit</button>
-                <Link to={`/events/${event.id}`}>show</Link>
-            </ul>
+
+            </Link>
             
         </div>
     )

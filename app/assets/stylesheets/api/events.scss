@@ -81,6 +81,11 @@
     margin-bottom: 20px;
 }
 
+.event-wrap a{
+    text-decoration-line: none;
+    color: black;
+}
+
 .event-wrap.city {
     margin: 15px 0px 0px 15px;
     border: 1px solid #EF6236;
@@ -94,6 +99,7 @@
 
 .city-events-container {
     display: flex;
+    background-color: rgb(247, 242, 226);
 }
 
 .city-events-list {
@@ -112,7 +118,7 @@
     color: #EF6236;
 }
 
-.event-date {
-    width: 70px;
-    align-items: left;
-}
+// .event-date {
+//     width: 70px;
+//     align-items: left;
+// }
