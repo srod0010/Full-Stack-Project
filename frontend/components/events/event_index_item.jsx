@@ -10,7 +10,11 @@ const eventIndexItem = ({event}) => {
     let utcMonth = utcFull.getUTCMonth(); // 0-12 month of year
     let utcDate = utcFull.getUTCDate(); // day of month
     let utcDay = utcFull.getUTCDay(); // 0-7 day of week
-    let utcHour = utcFull.getHours() % 12;
+    let utcHour = ((utcFull.getHours() + 11) % 12 + 1);
+    let endHour = ((utcFull.getHours() + 13) % 12 + 1);
+
+    let suffix = utcFull.getHours() >= 12 ? "PM" : "AM";
+ 
 
     let displayMonth = months[utcMonth]; // feb
     let displayDay = days[utcDay]; // sunday
@@ -18,7 +22,7 @@ const eventIndexItem = ({event}) => {
     // let testDate = event.date.split('T')[1];
     let displayDate = displayMonth + ' ' + utcDate; // feb 4
     let displayAddress = `${event.location}, ${event.city}, CA`;
-    let displayHour = `${utcHour}-${utcHour+2} PM`
+    let displayHour = `${utcHour} - ${endHour} ${suffix}`
 
     
     return (
