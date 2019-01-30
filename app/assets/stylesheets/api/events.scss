@@ -124,9 +124,26 @@
     flex-direction: column;
     width: 100%;
     height: 70%;
-    border: 1px solid red;
-    
-    
+    // border: 1px solid red; 
+}
+
+.tt-date-pic {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-corner-pic {
+    width: 100px;
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+    height: 100px;
+    border: 2px solid #EF6236;
+    // background-image: url(https://cdn.dribbble.com/users/738700/screenshots/2689482/icon_city_02-02___.png);
+    background-image: url(https://cdn3.iconfinder.com/data/icons/vol-1-1/128/bridge-512.png);
+    background-color: white;
+    background-size: 100% 100%;
+
 }
 
 .tt-date {
@@ -156,6 +173,7 @@
     font-weight: 900;
 }
 
+
 .tt-address {
     // border: 1px solid red;
     width: 80%;
@@ -164,6 +182,7 @@
     font-size: 13px;
     font-weight: 300;
     color: #929292;
+    border-bottom: 1px solid #929292;
 }
 
 // .event-date {

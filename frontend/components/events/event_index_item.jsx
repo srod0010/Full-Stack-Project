@@ -15,6 +15,7 @@ const eventIndexItem = ({event}) => {
     let displayMonth = months[utcMonth]; // feb
     let displayDay = days[utcDay]; // sunday
 
+    // let testDate = event.date.split('T')[1];
     let displayDate = displayMonth + ' ' + utcDate; // feb 4
     let displayAddress = `${event.location}, ${event.city}, CA`;
     let displayHour = `${utcHour}-${utcHour+2} PM`
@@ -24,10 +25,16 @@ const eventIndexItem = ({event}) => {
         <div className="event-wrap">
             <Link to={`/events/${event.id}`}>
                 <div className='tt-container'>
-                    <div className="tt-date">
-                        <p className='displayDay'>{displayDay}</p>
-                        <p className='displayDate'>{displayDate}</p>
-                        <p className='displayHour'>{displayHour}</p>
+                    <div className='tt-date-pic'>
+                        <div className="tt-date">
+                            <p className='displayDay'>{displayDay}</p>
+                            <p className='displayDate'>{displayDate}</p>
+                            <p className='displayHour'>{displayHour}</p>
+                        </div>
+                        <div className='event-corner-pic'>
+                            
+                        </div>
+
                     </div>
                     <div className='tt-address'>
                         <h4>{displayAddress}</h4>
