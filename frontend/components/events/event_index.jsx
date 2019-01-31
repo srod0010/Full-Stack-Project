@@ -46,25 +46,29 @@ class EventIndex extends React.Component {
                         </div>
                     </div>
                 </div>
-                
-                <div className='city-events-container'>
-                    <div className="event-wrap city">
-                        <h1 className="city-title-header">San Francisco <br /> 👉</h1>
-                        
+                <div className='events-center-wrap'>
+                    <div className="events-center-top">
+                    
                     </div>
-                    <ul className="city-events-list">
-                        {sfEvents}
-                    </ul>
-                </div>
-
-                <div className='city-events-container'>
-                    <div className="event-wrap city">
-                        <h1 className="city-title-header">New York <br /> 👉 </h1>
-
+                    <div className='city-events-container'>
+                        <div className="event-wrap city">
+                            <h1 className="city-title-header">San Francisco <br /> 👉</h1>
+                            
+                        </div>
+                        <ul className="city-events-list">
+                            {sfEvents}
+                        </ul>
                     </div>
-                    <ul className="city-events-list">
-                        {nyEvents}
-                    </ul>
+
+                    <div className='city-events-container'>
+                        <div className="event-wrap city">
+                            <h1 className="city-title-header">New York <br /> 👉 </h1>
+
+                        </div>
+                        <ul className="city-events-list">
+                            {nyEvents}
+                        </ul>
+                    </div>
                 </div>
                 
             </div>
