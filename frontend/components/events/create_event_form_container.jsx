@@ -5,7 +5,7 @@ import EventForm from './event_form';
 import { fetchEvents, createEvent } from '../../actions/event_actions';
 
 const mapStateToProps = state => ({
-    event: { name: '', description: '', location: '', city: '', date: '', open: '' }
+    event: { name: '', description: '', location: '', city: '', date: '' }
 })
 
 const mapDispatchToPost = dispatch => ({

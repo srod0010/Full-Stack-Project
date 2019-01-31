@@ -47,11 +47,7 @@ class EventForm extends React.Component {
               <option value="San Francisco">San Francisco</option>
               <option value="New York">New York</option>
             </select>
-            <select className="create-dropdown" value={this.state.open} onChange={this.update('open')}>
-              <option selected value="" disabled>OPEN?</option>
-              <option value="true"> True </option>
-              <option value="false"> False</option>
-            </select>
+            
             <br/>
             <input className="create-event-submit" type="submit" value="submit"/>
             
