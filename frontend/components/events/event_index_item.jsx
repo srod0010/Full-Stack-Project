@@ -23,7 +23,7 @@ const eventIndexItem = ({event}) => {
     let displayDate = displayMonth + ' ' + utcDate; // feb 4
     let displayAddress = `${event.location}, ${event.city}, CA`;
     let displayHour = `${utcHour} - ${endHour} ${suffix}`
-
+    let displaySpots = `Only ${event.spots} spots left!`
     
     return (
         <div className="event-wrap">
@@ -34,6 +34,7 @@ const eventIndexItem = ({event}) => {
                             <p className='displayDay'>{displayDay}</p>
                             <p className='displayDate'>{displayDate}</p>
                             <p className='displayHour'>{displayHour}</p>
+                            <p className='displaySpots'>{displaySpots}</p>
                         </div>
                         <div className='event-corner-pic'>
                             
