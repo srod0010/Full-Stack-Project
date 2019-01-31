@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {HashLink} from 'react-router-hash-link';
 import EventIndexItem from './event_index_item';
 import CreateEventFormContainer from './create_event_form_container';
 
@@ -56,9 +57,9 @@ class EventIndex extends React.Component {
                   <div className='events-jump-times'>
                       <h5>Jump to your city's meal times</h5>
                       <div className='jump-buttons'>
-                            <Link  to='/'> SAN FRANCISCO</Link>
-                            <Link  to='/'> NEW YORK</Link>
-                            <Link  to='/'> COMING SOON</Link>
+                            <HashLink smooth='true' to='/events#sanfrancisco'>San Francisco</HashLink>
+                            <HashLink smooth='true' to='/events#newyork'>New York</HashLink>
+                            
                             
                       </div>
                   </div>
@@ -66,7 +67,7 @@ class EventIndex extends React.Component {
               </div>
               <div className="city-events-container">
                 <div className="event-wrap city">
-                  <h1 className="city-title-header">
+                  <h1 id="sanfrancisco" className="city-title-header">
                     San Francisco <br /> 👉
                   </h1>
                 </div>
@@ -75,7 +76,7 @@ class EventIndex extends React.Component {
 
               <div className="city-events-container">
                 <div className="event-wrap city">
-                  <h1 className="city-title-header">
+                  <h1 id="newyork" className="city-title-header">
                     New York <br /> 👉{" "}
                   </h1>
                 </div>
