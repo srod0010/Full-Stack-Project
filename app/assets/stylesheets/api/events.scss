@@ -156,6 +156,8 @@
     // align-items: center;
 }
 
+
+
 .jump-buttons a {
     margin-left: 20px;
     margin-right: 20px;
@@ -172,6 +174,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.jump-buttons a:hover{
+    color: #f7f2e2;
+    background-color: #eda20b;
+    
 }
 
 
