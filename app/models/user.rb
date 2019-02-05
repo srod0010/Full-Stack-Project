@@ -23,6 +23,10 @@ class User < ApplicationRecord
         primary_key: :id,
         foreign_key: :host_id,
         class_name: :Event
+
+    has_many :joins,
+        foreign_key: :user_id,
+        class_name: :Join
     
     def self.find_user_by_credentials(username, password)
         user = User.find_by(username: username)
