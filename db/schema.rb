@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_31_184542) do
+ActiveRecord::Schema.define(version: 2019_02_01_190513) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 2019_01_31_184542) do
     t.integer "spots", default: 4
     t.index ["host_id"], name: "index_events_on_host_id"
     t.index ["name"], name: "index_events_on_name"
+  end
+
+  create_table "joins", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
