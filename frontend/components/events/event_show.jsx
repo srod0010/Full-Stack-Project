@@ -20,7 +20,18 @@ class EventShow extends React.Component {
         return timeSlice;
     }
     render() {
+        
         let event = this.props.event
+        let newJoin = {
+            user_id: this.props.currentUserId,
+            event_id: this.props.event.id
+        }
+
+        let joinButton = <button className="show-signup" onClick={() => this.props.createJoin(newJoin)}>
+            Join the event!
+        </button>
+
+        // debugger;
         if (!event) {
             return (<div> Theres no event</div>);
         }
@@ -36,11 +47,13 @@ class EventShow extends React.Component {
                                 <h3 className="left-date"> 📍 {this.props.event.location}</h3>
                                 <h3 className="left-date"> 🌇 {this.props.event.city}</h3>
                                 <h3 className="left-date"> 💯 Send to a friend 💯 </h3>
+                                
                             </div>
                             
                         </div>
 
                         <div className="left-second">
+                            {joinButton}
                             <button className="show-signup" onClick={() => this.props.history.push('/signup')}>
                                 Sign Me Up
                             </button>
