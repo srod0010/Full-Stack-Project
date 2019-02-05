@@ -22,4 +22,9 @@ class Event < ApplicationRecord
         primary_key: :id,
         foreign_key: :host_id,
         class_name: :User
+
+    has_many :joins,
+    foreign_key: :event_id,
+    class_name: :Join
+    
 end
