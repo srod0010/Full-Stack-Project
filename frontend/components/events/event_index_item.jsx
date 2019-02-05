@@ -2,7 +2,7 @@ import React from 'react';
 import {withRouter, Link} from 'react-router-dom';
 
 
-const eventIndexItem = ({event}) => {
+const eventIndexItem = ({event,deleteEvent}) => {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL','AUG','SEPT','OCT','NOV','DEC'];
     let utcFull = new Date(event.date);
@@ -15,7 +15,7 @@ const eventIndexItem = ({event}) => {
 
     let suffix = utcFull.getHours() >= 12 ? "PM" : "AM";
  
-
+    
     let displayMonth = months[utcMonth]; // feb
     let displayDay = days[utcDay]; // sunday
 
@@ -25,37 +25,28 @@ const eventIndexItem = ({event}) => {
     let displayHour = `${utcHour} - ${endHour} ${suffix}`
     let displaySpots = `Only ${event.spots} spots left!`
     
-    return (
-        <div className="event-wrap">
-            <Link to={`/events/${event.id}`}>
-                <div className='tt-container'>
-                    <div className='tt-date-pic'>
-                        <div className="tt-date">
-                            <p className='displayDay'>{displayDay}</p>
-                            <p className='displayDate'>{displayDate}</p>
-                            <p className='displayHour'>{displayHour}</p>
-                            <p className='displaySpots'>{displaySpots}</p>
-                        </div>
-                        <div className='event-corner-pic'>
-                            
-                        </div>
+    return <div className="event-wrap">
+        <Link to={`/events/${event.id}`}>
+          <div className="tt-container">
+            <div className="tt-date-pic">
+              <div className="tt-date">
+                <p className="displayDay">{displayDay}</p>
+                <p className="displayDate">{displayDate}</p>
+                <p className="displayHour">{displayHour}</p>
+                <p className="displaySpots">{displaySpots}</p>
+              </div>
+              <div className="event-corner-pic" />
+            </div>
+            <div className="tt-address">
+              <h4>{displayAddress}</h4>
+            </div>
+          </div>
 
-                    </div>
-                    <div className='tt-address'>
-                        <h4>{displayAddress}</h4>
-                    </div>
-                </div>
-                {/* <h3> Join us for: {event.name}</h3> */}
-                    {/* <button onClick={() => deleteEvent(event.id)}>Delete</button>
-                    <button onClick={() => history.push(`/events/${event.id}/edit`)}>Edit</button> */}
-            
-                
-
-            </Link>
-            
-        </div>
-        
-    )
+          {/* <h3> Join us for: {event.name}</h3> */}
+          {/* <button onClick={() => history.push(`/events/${event.id}/edit`)}>Edit</button> */}
+        </Link>
+        {/* <button onClick={() => deleteEvent(event.id)}>Delete</button> */}
+      </div>;
 }
 
 export default withRouter(eventIndexItem);
