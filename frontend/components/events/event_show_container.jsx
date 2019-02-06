@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { Link } from 'react-router-dom';
 import EventShow from './event_show';
-import {fetchEvent, updateEvent} from '../../actions/event_actions';
+import {fetchEvent, updateEvent, deleteEvent} from '../../actions/event_actions';
 import {createJoin, removeJoin} from '../../actions/join_actions';
 
 const mapStateToProps = (state, ownProps) => {
@@ -26,7 +26,8 @@ const mapDispatchToProps = dispatch => ({
   fetchEvent: id => dispatch(fetchEvent(id)),
   createJoin: join => dispatch(createJoin(join)),
   removeJoin: id => dispatch(removeJoin(id)),
-  updateEvent: event => dispatch(updateEvent(event))
+  updateEvent: event => dispatch(updateEvent(event)),
+  deleteEvent: id => dispatch(deleteEvent(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventShow);
