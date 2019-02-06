@@ -66,19 +66,21 @@ class EventShow extends React.Component {
 
         let showPageButton;
        
-        // if (this.props.currentUserId === event.host_id) {
-        //     showPageButton = deleteButton;
-        // } else if (!this.props.currentUserId) {
-        //     showPageButton = signupButton;
-        // } else {
-        //     showPageButton = joinButton;
-        // }
-        
-        if (this.props.currentUserJoin) {
+        if (this.props.currentUserId === event.host_id) {
+            showPageButton = deleteButton;
+        } else if (!this.props.currentUserId) {
+            showPageButton = signupButton;
+        } else if (this.props.currentUserJoin) {
             showPageButton = leaveButton;
         } else {
             showPageButton = joinButton;
         }
+        
+        // if (this.props.currentUserJoin) {
+        //     showPageButton = leaveButton;
+        // } else {
+        //     showPageButton = joinButton;
+        // }
 
         // debugger;
         if (!event) {
