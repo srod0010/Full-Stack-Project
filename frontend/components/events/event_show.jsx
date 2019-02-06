@@ -37,6 +37,15 @@ class EventShow extends React.Component {
             Join the event!
         </button>
 
+        
+
+        let deleteButton = <button className="show-signup" onClick={() => {
+            this.props.deleteEvent(event.id);
+            this.props.history.push("/events");
+        }}>
+            Cancel Your Event :(
+        </button>
+
         // debugger;
         if (!event) {
             return (<div> Theres no event</div>);
@@ -60,6 +69,7 @@ class EventShow extends React.Component {
 
                         <div className="left-second">
                             {joinButton}
+                            {deleteButton}
                             <button className="show-signup" onClick={() => this.props.history.push('/signup')}>
                                 Sign Me Up
                             </button>
