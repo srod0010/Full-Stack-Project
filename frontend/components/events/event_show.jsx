@@ -22,7 +22,13 @@ class EventShow extends React.Component {
     render() {
         
         let event = this.props.event
+
+        if (!event) {
+            return <div>There is none</div>
+        }
+        // debugger
         let newJoin = {
+
             user_id: this.props.currentUserId,
             event_id: this.props.event.id
         }
