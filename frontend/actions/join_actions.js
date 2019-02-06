@@ -6,6 +6,7 @@ export const DELETE_JOIN = "DELETE_JOIN";
 
 
 export const receiveJoin = payload => ({
+    type: RECEIVE_JOIN,
     payload
 })
 
