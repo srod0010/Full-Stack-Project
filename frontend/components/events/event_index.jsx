@@ -19,7 +19,7 @@ class EventIndex extends React.Component {
         // })
 
         let sf = this.props.events.filter(event => {
-            return event.city === 'San Francisco'
+            return (event.city === 'San Francisco' || event.city === 'sf')
         })
         let ny = this.props.events.filter(event => {
             return event.city === 'New York'
