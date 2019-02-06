@@ -17,7 +17,6 @@ const mapStateToProps = (state, ownProps) => {
         currentUserId: state.session.id,
         users: state.entities.users,
         join: state.entities.joins,
-        
         currentUserJoin: Object.values(state.entities.joins).filter(join => join.user_id == state.session.id && join.event_id == eventId)[0]
     })
 }
