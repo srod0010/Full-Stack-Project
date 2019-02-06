@@ -27,29 +27,64 @@ class EventShow extends React.Component {
             return <div>There is none</div>
         }
         // debugger
-        let newJoin = {
-
-            user_id: this.props.currentUserId,
-            event_id: this.props.event.id
-        }
-
-        let joinButton = <button className="show-signup" onClick={() => this.props.createJoin(newJoin)}>
-            Join the event!
-        </button>
-
+        // let joinId = this.props.currentUserJoin.id;
         
 
+        let joinButton = (
+          <button
+            className="show-signup"
+            onClick={() =>
+              this.props.createJoin({
+                user_id: this.props.currentUserId,
+                event_id: this.props.event.id
+              })
+            }
+          >
+            Join the event!
+          </button>
+        );
+
+        let leaveButton = (
+          <button
+            className="show-signup"
+            onClick={() => this.props.removeJoin(this.props.event.id)}
+          >
+            Leave the event :(
+          </button>
+        );
+
+        let signupButton = <button className="show-signup" onClick={() => this.props.history.push('/signup')}>
+                                Sign Me Up
+                            </button>
+
         let deleteButton = <button className="show-signup" onClick={() => {
-            this.props.deleteEvent(event.id);
-            this.props.history.push("/events");
+            this.props.deleteEvent(event.id)
+                .then(res => this.props.history.push("/events"))
         }}>
             Cancel Your Event :(
         </button>
+
+        let showPageButton;
+       
+        // if (this.props.currentUserId === event.host_id) {
+        //     showPageButton = deleteButton;
+        // } else if (!this.props.currentUserId) {
+        //     showPageButton = signupButton;
+        // } else {
+        //     showPageButton = joinButton;
+        // }
+        
+        if (this.props.currentUserJoin) {
+            showPageButton = leaveButton;
+        } else {
+            showPageButton = joinButton;
+        }
 
         // debugger;
         if (!event) {
             return (<div> Theres no event</div>);
         }
+        
         return (
             <div className="show-container">
                 <div className="show-content-container">
@@ -68,11 +103,11 @@ class EventShow extends React.Component {
                         </div>
 
                         <div className="left-second">
-                            {joinButton}
-                            {deleteButton}
-                            <button className="show-signup" onClick={() => this.props.history.push('/signup')}>
+                            {showPageButton}
+                            {/* {leaveButton} */}
+                            {/* <button className="show-signup" onClick={() => this.props.history.push('/signup')}>
                                 Sign Me Up
-                            </button>
+                            </button> */}
                         </div>
 
                         <div className="left-third">
