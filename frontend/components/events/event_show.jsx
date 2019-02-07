@@ -6,6 +6,7 @@ class EventShow extends React.Component {
     componentDidMount() {
         let Id = this.props.match.params.eventId
         this.props.fetchEvent(Id)
+        
     }
 
     getDate() {
@@ -65,7 +66,6 @@ class EventShow extends React.Component {
         </button>
 
         let showPageButton;
-       
         if (this.props.currentUserId === event.host_id) {
             showPageButton = deleteButton;
         } else if (!this.props.currentUserId) {
