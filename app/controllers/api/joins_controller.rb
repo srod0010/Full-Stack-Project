@@ -15,7 +15,6 @@ class Api::JoinsController < ApplicationController
     def destroy
         # @join = Join.find_by(event_id: params[:event_id], user_id: current_user.id)
         @join = current_user.joins.find_by(event_id: params[:id])
-
         @join.destroy
         render :show
     end
