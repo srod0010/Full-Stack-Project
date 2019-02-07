@@ -17,12 +17,12 @@ const Greeting = ({ currentUser, logout }) => {
         </nav>
     );
     const personalGreeting = () => (
-        <div className="header-group">
+        <nav className="login-signup">
             {/* <h2 className="header-name">Hi, {currentUser.username}!</h2> */}
             <Link className="header-button nav" to="/events">Events</Link>
             <Link className="header-button nav" to="/events/new">Host</Link>
             <button className="header-button logout" onClick={logout}>Log Out</button>
-        </div>
+        </nav>
     );
 
     return currentUser ? personalGreeting() : sessionLinks();
