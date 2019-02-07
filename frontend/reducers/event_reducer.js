@@ -6,7 +6,11 @@ const eventsReducer = (state = {}, action) => {
 
     switch(action.type) {
         case RECEIVE_EVENTS:
-            return action.payload.events;
+            if (action.payload.events) {
+                return action.payload.events;
+            } else {
+                return {}
+            }
             //action.payload.events
         case RECEIVE_EVENT:
             // debugger
