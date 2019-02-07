@@ -10,9 +10,9 @@ export const receiveEvents = payload => ({
     payload
 })
 
-export const receiveEvent = event => ({
+export const receiveEvent = payload => ({
     type: RECEIVE_EVENT,
-    event
+    payload
 })
 
 export const removeEvent = event => ({
