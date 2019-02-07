@@ -1,10 +1,11 @@
 json.events do
     @events.each do |event|
         json.set! event.id do 
-            json.partial! 'event', event: event
+            json.extract! event, :id, :name, :host_id, :description, :location, :city, :date, :spots
         end
     end
 end
+
 
 json.joins do
     @events.each do |event|
@@ -15,4 +16,3 @@ json.joins do
         end
     end
 end
-
