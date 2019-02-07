@@ -24,6 +24,15 @@ const eventIndexItem = ({event,deleteEvent}) => {
     let displayAddress = `${event.location}, ${event.city}, CA`;
     let displayHour = `${utcHour} - ${endHour} ${suffix}`
     let displaySpots = `Only ${event.spots} spots left!`
+  let images = ["https://cdn3.iconfinder.com/data/icons/world-monuments/137/WorldMonuments-12-512.png", "https://cdn3.iconfinder.com/data/icons/vol-1-1/128/bridge-512.png"]
+  let imageSource;
+
+  if (event.city === 'San Francisco') {
+    imageSource = images[1];
+  } else {
+    imageSource = images[0];
+  }
+    
     
     return <div className="event-wrap">
         <Link to={`/events/${event.id}`}>
@@ -35,7 +44,9 @@ const eventIndexItem = ({event,deleteEvent}) => {
                 <p className="displayHour">{displayHour}</p>
                 <p className="displaySpots">{displaySpots}</p>
               </div>
-              <div className="event-corner-pic" />
+              <div className="event-corner-pic">
+              <img src={imageSource} alt="" height='100%' width='100%' background-color='black' />
+              </div>
             </div>
             <div className="tt-address">
               <h4>{displayAddress}</h4>
