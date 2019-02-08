@@ -24,7 +24,10 @@ const eventIndexItem = ({event,deleteEvent}) => {
     let displayAddress = `${event.location}, ${event.city}, CA`;
     let displayHour = `${utcHour} - ${endHour} ${suffix}`
     let displaySpots = `Only ${event.spots} spots left!`
-  let images = ["https://cdn3.iconfinder.com/data/icons/world-monuments/137/WorldMonuments-12-512.png", "https://cdn3.iconfinder.com/data/icons/vol-1-1/128/bridge-512.png"]
+  let images = [
+    "https://cdn0.iconfinder.com/data/icons/city-elements-9/128/City_New_York-512.png",
+    "https://cdn3.iconfinder.com/data/icons/vol-1-1/128/bridge-512.png"
+  ];
   let imageSource;
 
   if (event.city === 'San Francisco') {
@@ -42,7 +45,7 @@ const eventIndexItem = ({event,deleteEvent}) => {
                 <p className="displayDay">{displayDay}</p>
                 <p className="displayDate">{displayDate}</p>
                 <p className="displayHour">{displayHour}</p>
-                <p className="displaySpots">{displaySpots}</p>
+               
               </div>
               <div className="event-corner-pic">
               <img src={imageSource} alt="" height='100%' width='100%' background-color='black' />
@@ -50,9 +53,14 @@ const eventIndexItem = ({event,deleteEvent}) => {
             </div>
             <div className="tt-address">
               <h4>{displayAddress}</h4>
+              
             </div>
+          
           </div>
-
+          <div className="displaySpots">
+            <p>{displaySpots}</p>
+           
+          </div>
           {/* <h3> Join us for: {event.name}</h3> */}
           {/* <button onClick={() => history.push(`/events/${event.id}/edit`)}>Edit</button> */}
         </Link>

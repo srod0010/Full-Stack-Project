@@ -233,7 +233,7 @@
     bottom: 20px;
     right: 10px;
     height: 100px;
-    border: 2px solid #EF6236;
+    border: 2px solid #eda20b;
     // background-image: url(https://cdn.dribbble.com/users/738700/screenshots/2689482/icon_city_02-02___.png);
     // background-image: url(https://cdn3.iconfinder.com/data/icons/vol-1-1/128/bridge-512.png);
     background-color: white;
@@ -266,6 +266,18 @@
     font-size: 15px;
     color: black;
     font-weight: 900;
+}
+
+.displaySpots {
+    color: #929292;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    height: 30%;
+    
+    // font-weight: 700;
 }
 
 

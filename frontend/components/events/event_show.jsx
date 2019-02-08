@@ -76,11 +76,7 @@ class EventShow extends React.Component {
             showPageButton = joinButton;
         }
         
-        // if (this.props.currentUserJoin) {
-        //     showPageButton = leaveButton;
-        // } else {
-        //     showPageButton = joinButton;
-        // }
+       
 
         // debugger;
         if (!event) {
@@ -106,10 +102,6 @@ class EventShow extends React.Component {
 
                         <div className="left-second">
                             {showPageButton}
-                            {/* {leaveButton} */}
-                            {/* <button className="show-signup" onClick={() => this.props.history.push('/signup')}>
-                                Sign Me Up
-                            </button> */}
                         </div>
 
                         <div className="left-third">
