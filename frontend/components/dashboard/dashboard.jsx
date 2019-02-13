@@ -35,10 +35,15 @@ class Dashboard extends React.Component {
             
             <div className="dashboard-wrapper">
                 <div className="dashboard-content">
-                    <h1>Welcome Home!</h1>
-                    <h3>See all the events you are involved in!</h3>
+                    <div className="dashboard-content-text"> 
+                        <h1>Welcome Home!</h1>
+                        <h3>See all the events you are involved in!</h3>
+
+                    </div>
                     <div className="dashboard-events-wrapper">
-                        <h1>Events you are hosting</h1>
+                        <div className="dashboard-content-text host">
+                            <h1>Events you are hosting</h1>
+                        </div>
                         <div className="dashboard-events">
                             {hosted}
                         </div>
@@ -46,7 +51,9 @@ class Dashboard extends React.Component {
                     </div>
 
                     <div className="dashboard-events-wrapper">
-                        <h1>Events you are attending</h1>
+                        <div className="dashboard-content-text host">
+                            <h1>Events you are attending</h1>
+                        </div>
                         <div className="dashboard-events">
                             {joined}
                         </div>
