@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 
 import { receiveJoin, deleteJoin } from "../../actions/join_actions";
-import { updateEvent, deleteEvent } from "../../actions/event_actions";
+import { updateEvent, deleteEvent, fetchEvents } from "../../actions/event_actions";
 import Dashboard from './dashboard';
 
 
@@ -21,7 +21,8 @@ const mapDispatchToProps = dispatch => {
     return ({
         deleteJoin: id => dispatch(deleteJoin(id)),
         deleteEvent: id => dispatch(deleteEvent(id)),
-        updateEvent: event => dispatch(updateEvent(event))
+        updateEvent: event => dispatch(updateEvent(event)),
+        fetchEvents: () => dispatch(fetchEvents())
     })
 }
 
