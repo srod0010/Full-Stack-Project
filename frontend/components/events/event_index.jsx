@@ -10,6 +10,7 @@ class EventIndex extends React.Component {
     }
 
     componentDidMount() {
+      // debugger
         this.props.fetchEvents();
     }
 
