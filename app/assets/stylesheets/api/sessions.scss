@@ -1,3 +1,35 @@
 // Place all the styles related to the api/sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.signup-container {
+    padding-top: 50px;
+    height: 100%;
+    width: 600px;
+}
+
+.profile-image-div {
+    height: 110px;
+    width: 110px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.profile-image-div img {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+
+}
+
+.options-profile-img {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 11px;
+    width: 100%;
+}
+
+.selected-class {
+    border: 5px solid red;
+}
