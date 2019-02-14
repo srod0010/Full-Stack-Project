@@ -9,6 +9,8 @@ class sessionForm extends React.Component {
             password: "",
             email: '',
             city: '',
+            image: '',
+            profPic: 0
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -46,7 +48,7 @@ class sessionForm extends React.Component {
 
     render() {
         let demoUser = {email: "pass", password: "password"};
-
+        
         if(this.props.formType ==='Login'){
         return(
             <div className="page-wrapper">
@@ -60,6 +62,8 @@ class sessionForm extends React.Component {
                         <br/>
                         <input type="password" placeholder="Password" value={this.state.password} onChange={this.update("password")}/>
                         <br/>
+            
+
                         <input className="submit-button" type="submit" value="sign in"/>
                         <input className="demo-submit-button" type="submit" onClick={() => this.props.processForm(demoUser)} value="Demo login"/>
                         <br/>
@@ -70,6 +74,7 @@ class sessionForm extends React.Component {
                 </div>
             </div>
         )} else{
+            
             return (
                 <div className="signup-wrapper">
                     {this.renderErrors()}
@@ -85,10 +90,56 @@ class sessionForm extends React.Component {
                             <input type="text" placeholder="City" value={this.state.city} onChange={this.update("city")} />
                             
                             <input type="password" placeholder="Password (at least 8 characters you won't forget!" value={this.state.password} onChange={this.update("password")} />
+
+                            <br />
+                            <p>Select a profile image:</p>
+
+                            <div onChange={this.update("image")} value={this.state.image} className="options-profile-img">
+                                <div onClick={() => this.setState({
+                                    profPic: 0,
+                                    image:
+                                        "http://isd-soft.com/wp-content/uploads/2017/02/DCeCHa_logo.png"
+                                })} className={"profile-image-div " + (this.state.profPic === 0 ? "selected-class" : "")}>
+                                    <img src="http://isd-soft.com/wp-content/uploads/2017/02/DCeCHa_logo.png" />
+                                </div>
+                                <div onClick={() => this.setState({
+                                    profPic: 1,
+                                    image:
+                                        "https://cdn1.iconfinder.com/data/icons/avatar-2-2/512/Chef_2-512.png"
+                                })} className={"profile-image-div " + (this.state.profPic === 1 ? "selected-class" : "")}>
+                                    <img src="https://cdn1.iconfinder.com/data/icons/avatar-2-2/512/Chef_2-512.png" />
+                                </div>
+                                <div onClick={() => this.setState({
+                                    profPic: 2,
+                                    image:
+                                        "https://cdn4.iconfinder.com/data/icons/professions-2-2/151/61-512.png"
+                                })} className={"profile-image-div " + (this.state.profPic === 2 ? "selected-class" : "")}>
+                                    <img src="https://cdn4.iconfinder.com/data/icons/professions-2-2/151/61-512.png" />
+                                </div>
+                                <div onClick={() => this.setState({
+                                    profPic: 3,
+                                    image:
+                                        "https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Chef-2-512.png"
+                                })} className={"profile-image-div " + (this.state.profPic === 3 ? "selected-class" : "")}>
+                                    <img src="https://cdn0.iconfinder.com/data/icons/kameleon-free-pack-rounded/110/Chef-2-512.png" />
+                                </div>
+                                <div onClick={() => this.setState({
+                                    profPic: 4,
+                                    image:
+                                        "https://cdn0.iconfinder.com/data/icons/food-icons-rounded/110/Cocktail-512.png"
+                                })} className={"profile-image-div " + (this.state.profPic === 4 ? "selected-class" : "")}>
+                                    <img src="https://cdn0.iconfinder.com/data/icons/food-icons-rounded/110/Cocktail-512.png" />
+                                </div>
+                            </div>
+
+                            <br />
+                            
                             
                             <input className="signup-submit"type="submit" value="Let's get dinner!" />
                             <input className="signup-submit demo" type="submit" onClick={() => this.props.demo(demoUser)} value="Demo Login" />
                             <h4> {this.props.navLink} </h4>
+
+                            
                         </div>
                     </form>
                 </div>  
