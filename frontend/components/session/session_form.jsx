@@ -10,7 +10,7 @@ class sessionForm extends React.Component {
             email: '',
             city: '',
             image: '',
-            profPic: 0
+            profPic: 1
         };
         this.handleSubmit = this.handleSubmit.bind(this);
     }
