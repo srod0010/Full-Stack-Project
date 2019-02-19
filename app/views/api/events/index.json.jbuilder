@@ -2,6 +2,7 @@ json.events do
     @events.each do |event|
         json.set! event.id do 
             json.extract! event, :id, :name, :host_id, :description, :location, :city, :date, :spots
+            json.image event.host.image
         end
     end
 end
@@ -16,3 +17,4 @@ json.joins do
         end
     end
 end
+
