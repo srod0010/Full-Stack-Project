@@ -1,6 +1,7 @@
 
 json.event do
    json.extract! @event, :id, :name, :host_id, :description, :location, :city, :date, :spots
+   json.image @event.host.image
 end
 
 json.joins do
