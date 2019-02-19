@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRouter, Link} from 'react-router-dom';
+import ProgressBar from '../progress/progress_bar';
 
 
 const eventIndexItem = ({event,deleteEvent}) => {
@@ -23,7 +24,7 @@ const eventIndexItem = ({event,deleteEvent}) => {
     let displayDate = displayMonth + ' ' + utcDate; // feb 4
     let displayAddress = `${event.location}, ${event.city}, CA`;
     let displayHour = `${utcHour} - ${endHour} ${suffix}`
-    let displaySpots = `Only ${event.spots} spots left!`
+    let displaySpots = `${event.spots} spots left!`
   let images = [
     "https://cdn0.iconfinder.com/data/icons/city-elements-9/128/City_New_York-512.png",
     "https://cdn3.iconfinder.com/data/icons/vol-1-1/128/bridge-512.png"
@@ -59,6 +60,10 @@ const eventIndexItem = ({event,deleteEvent}) => {
           </div>
           <div className="displaySpots">
             <p>{displaySpots}</p>
+            <div className="spots-images">
+              
+              <ProgressBar spots={event.spots}/>
+            </div>
            
           </div>
           {/* <h3> Join us for: {event.name}</h3> */}
