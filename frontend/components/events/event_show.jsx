@@ -165,7 +165,7 @@ class EventShow extends React.Component {
                                 <h3 className="left-date"> ⏰ {this.getTime()} PM</h3>
                                 <h3 className="left-date"> 📍 {this.props.event.location}</h3>
                                 <h3 className="left-date"> 🌇 {this.props.event.city}</h3>
-                                <h3 className="left-date"> 🌇 {this.props.event.spots} spots left!</h3>
+                                <h3 className="left-date"> 🌇 {this.props.event.spots === 0 ? "No " : this.props.event.spots} spots left</h3>
                                 <h3 className="left-date"> 💯 Send to a friend 💯 </h3>
                                 
                             </div>
