@@ -136,15 +136,37 @@ class EventShow extends React.Component {
             Cancel Your Event :(
         </button>
 
+        let capacityButton = <button className="show-signup">Event is full</button>
+
         let showPageButton;
-        if (this.props.currentUserId === event.host_id) {
-            showPageButton = deleteButton;
+        // if (this.props.currentUserId === event.host_id) {
+        //     showPageButton = deleteButton;
+        // } else if (!this.props.currentUserId) {
+        //     showPageButton = signupButton;
+        // } else if (this.props.currentUserJoin) {
+        //     showPageButton = leaveButton;
+        // } else {
+        //     showPageButton = joinButton;
+        // }
+       
+        if(this.props.currentUserId) {
+            if (this.props.currentUserId === event.host_id) {
+                showPageButton = deleteButton;
+            } else if (this.props.currentUserJoin) {
+                showPageButton = leaveButton;
+            } else {
+                if (event.spots !== 0) {
+                    showPageButton = joinButton;
+                } else {
+                    showPageButton = capacityButton;
+                }
+            }
         } else if (!this.props.currentUserId) {
-            showPageButton = signupButton;
-        } else if (this.props.currentUserJoin) {
-            showPageButton = leaveButton;
-        } else {
-            showPageButton = joinButton;
+            if(this.props.event.spots !== 0) {
+                showPageButton = signupButton;
+            } else {
+                showPageButton = capacityButton;
+            }
         }
         
        
@@ -165,7 +187,7 @@ class EventShow extends React.Component {
                                 <h3 className="left-date"> ⏰ {this.getTime()} PM</h3>
                                 <h3 className="left-date"> 📍 {this.props.event.location}</h3>
                                 <h3 className="left-date"> 🌇 {this.props.event.city}</h3>
-                                <h3 className="left-date"> 🌇 {this.props.event.spots === 0 ? "No " : this.props.event.spots} spots left</h3>
+                                <h3 className="left-date"> {this.props.event.spots === 0 ? "🔒 Sorry, this one's full!" : `🔓${this.props.event.spots} spots left`}</h3>
                                 <h3 className="left-date"> 💯 Send to a friend 💯 </h3>
                                 
                             </div>
