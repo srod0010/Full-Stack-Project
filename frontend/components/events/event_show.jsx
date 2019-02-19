@@ -228,7 +228,10 @@ However, it may bring you comfort to know a little something about your Host. If
                             <img src={event.image} width="100%" height="100%" alt=""/>
                         </div>
                         <div className="host-information">
-                            
+                            <h4>Do you sometimes crave uninterrupted conversation? </h4>
+                            <p>Have you ever looked at someone in the street and wished to know what it would be like to view life through their eyes? </p>
+                            <h4>Do you enjoy dining out?</h4>
+                            <p>If so, you've come to the right place. Join me for a meal and let's exchange stories, and learn about the world through each other.</p>
                         </div>
                     </div>
                     

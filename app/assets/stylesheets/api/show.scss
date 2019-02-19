@@ -104,12 +104,13 @@
 
 .right-show {
     width: 50%;
-    height: 465px;
+    height: 100%;
     margin-top: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #EF6236;
 }
 
 .host-pic-container {
@@ -119,6 +120,22 @@
 
 }
 
+.host-information {
+    margin: 40px 0 40px 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #eda20b;
+    background-color: #f1e9c6;
+    color: #EF6236;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Nanum Pen Script";
+}
+
+.host-information p {
+    font-weight: 500;
+}
 
 
 
