@@ -18,7 +18,7 @@ class EventIndex extends React.Component {
         // let eventItems = this.props.events.map(event => {
         //     return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} />
         // })
-
+        
         let sf = this.props.events.filter(event => {
             return (event.city === 'San Francisco' || event.city === 'sf')
         })
@@ -27,11 +27,11 @@ class EventIndex extends React.Component {
         })
 
         let sfEvents = sf.map(event => {
-            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent}/>
+            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} image={event.image}/>
         })
 
         let nyEvents = ny.map(event => {
-            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent}/>
+            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} image={event.image}/>
         })
 
         

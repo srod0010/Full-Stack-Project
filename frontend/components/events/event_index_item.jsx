@@ -3,7 +3,7 @@ import {withRouter, Link} from 'react-router-dom';
 import ProgressBar from '../progress/progress_bar';
 
 
-const eventIndexItem = ({event,deleteEvent}) => {
+const eventIndexItem = ({event,deleteEvent, image}) => {
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL','AUG','SEPT','OCT','NOV','DEC'];
     let utcFull = new Date(event.date);
@@ -49,7 +49,7 @@ const eventIndexItem = ({event,deleteEvent}) => {
                
               </div>
               <div className="event-corner-pic">
-              <img src={imageSource} alt="" height='100%' width='100%' background-color='black' />
+              <img src={image} alt="" height='100%' width='100%' background-color='black' />
               </div>
             </div>
             <div className="tt-address">
