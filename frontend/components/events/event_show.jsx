@@ -8,7 +8,7 @@ class EventShow extends React.Component {
         this.handleCancel = this.handleCancel.bind(this);
         this.handleJoin = this.handleJoin.bind(this);
         this.handleLeave = this.handleLeave.bind(this);
-
+        
     }
 
     componentDidMount() {
@@ -44,6 +44,7 @@ class EventShow extends React.Component {
         return (
             deleteEvent(event.id)
                 .then(res => this.props.history.push("/events"))
+
         )
     }
 
@@ -52,21 +53,24 @@ class EventShow extends React.Component {
         const {createJoin, currentUserId, event, updateEvent} = this.props;
        
         // debugger
-        return (
+        event.spots -= 1;
+        
             createJoin({
                 user_id: currentUserId,
                 event_id: event.id
             })
-            
-        )
+            updateEvent(event)
+        
     }
 
     handleLeave(e) {
         e.preventDefault();
-
+        // debugger
         const {removeJoin, event, updateEvent} = this.props;
+        event.spots += 1;
         
-        return removeJoin(event.id);
+        removeJoin(event.id);
+        updateEvent(event)
     }
 
     render() {
