@@ -23,11 +23,12 @@ class Dashboard extends React.Component {
             return <div>NO EVENTS</div>
         }
         let hosted = this.props.hostedEvents.map(event => {
-            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} />
+            
+            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} image={event.image} />
         })
 
         let joined = this.props.joinedEvents.map(event => {
-            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} />
+            return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} image={event.image} />
         })
 
         // debugger
