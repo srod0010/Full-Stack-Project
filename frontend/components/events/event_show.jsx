@@ -139,6 +139,7 @@ class EventShow extends React.Component {
         let capacityButton = <button className="show-signup">Event is full</button>
 
         let showPageButton;
+        let hostEditButton = <button className="show-signup" onClick={() => this.props.history.push(`/events/${event.id}/edit`)}>Update Event</button>
         // if (this.props.currentUserId === event.host_id) {
         //     showPageButton = deleteButton;
         // } else if (!this.props.currentUserId) {
@@ -152,6 +153,7 @@ class EventShow extends React.Component {
         if(this.props.currentUserId) {
             if (this.props.currentUserId === event.host_id) {
                 showPageButton = deleteButton;
+
             } else if (this.props.currentUserJoin) {
                 showPageButton = leaveButton;
             } else {
@@ -196,6 +198,7 @@ class EventShow extends React.Component {
 
                         <div className="left-second">
                             {showPageButton}
+                            {showPageButton === deleteButton ? hostEditButton : ''}
                         </div>
 
                         <div className="left-third">
