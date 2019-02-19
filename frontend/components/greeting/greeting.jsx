@@ -22,7 +22,7 @@ const Greeting = ({ currentUser, logout }) => {
             <Link className="header-button nav" to="/events">Events</Link>
             <Link className="header-button nav" to="/events/new">Host</Link>
             <Link className="header-button nav" to="/dashboard">Dashboard</Link>
-            <button className="header-button logout" onClick={logout}>Log Out</button>
+            <button className="greeting-button-signup logout" onClick={logout}>Log Out</button>
         </nav>
     );
 

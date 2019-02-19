@@ -55,8 +55,10 @@
     background: white;
     border-radius: 6px;
     font-size: 16px;
-
+    color: rgb(244, 182, 66);
 }
+
+
 
 .greeting-button-signup:hover {
     height: 40px;
@@ -66,6 +68,10 @@
     border: 2px solid #FEFEFE;
     font-size: 16px;
 
+}
+
+.greeting-button-signup.logout:hover {
+    color: white;
 }
 
 .sign-up-button {
