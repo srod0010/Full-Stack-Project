@@ -2,6 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 class EventShow extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handleSignup = this.handleSignup.bind(this);
+        this.handleCancel = this.handleCancel.bind(this);
+        this.handleJoin = this.handleJoin.bind(this);
+        this.handleLeave = this.handleLeave.bind(this);
+
+    }
 
     componentDidMount() {
         let Id = this.props.match.params.eventId
@@ -20,6 +28,47 @@ class EventShow extends React.Component {
         let timeSlice = time.slice(11);
         return timeSlice;
     }
+    
+    handleSignup(e) {
+        e.preventDefault()
+        return (
+            this.props.history.push('/signup')
+        )
+    }
+
+    handleCancel(e) {
+        // debugger
+        e.preventDefault()
+        const {deleteEvent, event} = this.props;
+        
+        return (
+            deleteEvent(event.id)
+                .then(res => this.props.history.push("/events"))
+        )
+    }
+
+    handleJoin(e) {
+        e.preventDefault()
+        const {createJoin, currentUserId, event, updateEvent} = this.props;
+       
+        // debugger
+        return (
+            createJoin({
+                user_id: currentUserId,
+                event_id: event.id
+            })
+            
+        )
+    }
+
+    handleLeave(e) {
+        e.preventDefault();
+
+        const {removeJoin, event, updateEvent} = this.props;
+        
+        return removeJoin(event.id);
+    }
+
     render() {
         
         let event = this.props.event
@@ -31,37 +80,55 @@ class EventShow extends React.Component {
         // let joinId = this.props.currentUserJoin.id;
         
 
+        // let joinButton = (
+        //   <button
+        //     className="show-signup"
+        //     onClick={() =>
+        //       this.props.createJoin({
+        //         user_id: this.props.currentUserId,
+        //         event_id: this.props.event.id
+        //       })
+        //     }
+        //   >
+        //     Join the event!
+        //   </button>
+        // );
         let joinButton = (
           <button
             className="show-signup"
-            onClick={() =>
-              this.props.createJoin({
-                user_id: this.props.currentUserId,
-                event_id: this.props.event.id
-              })
-            }
-          >
+            onClick={this.handleJoin}>
             Join the event!
           </button>
         );
 
+        // let leaveButton = (
+        //   <button
+        //     className="show-signup"
+        //     onClick={() => this.props.removeJoin(this.props.event.id)}
+        //   >
+        //     Leave the event :(
+        //   </button>
+        // );
         let leaveButton = (
           <button
             className="show-signup"
-            onClick={() => this.props.removeJoin(this.props.event.id)}
+            onClick={this.handleLeave}
           >
             Leave the event :(
           </button>
         );
 
-        let signupButton = <button className="show-signup" onClick={() => this.props.history.push('/signup')}>
+        let signupButton = <button className="show-signup" onClick={this.handleSignup}>
                                 Sign Me Up
                             </button>
 
-        let deleteButton = <button className="show-signup" onClick={() => {
-            this.props.deleteEvent(event.id)
-                .then(res => this.props.history.push("/events"))
-        }}>
+        // let deleteButton = <button className="show-signup" onClick={() => {
+        //     this.props.deleteEvent(event.id)
+        //         .then(res => this.props.history.push("/events"))
+        // }}>
+        //     Cancel Your Event :(
+        // </button>
+        let deleteButton = <button className="show-signup" onClick={this.handleCancel}>
             Cancel Your Event :(
         </button>
 
@@ -94,6 +161,7 @@ class EventShow extends React.Component {
                                 <h3 className="left-date"> ⏰ {this.getTime()} PM</h3>
                                 <h3 className="left-date"> 📍 {this.props.event.location}</h3>
                                 <h3 className="left-date"> 🌇 {this.props.event.city}</h3>
+                                <h3 className="left-date"> 🌇 {this.props.event.spots} spots left!</h3>
                                 <h3 className="left-date"> 💯 Send to a friend 💯 </h3>
                                 
                             </div>
