@@ -222,7 +222,7 @@ However, it may bring you comfort to know a little something about your Host. If
 
                     <div className="right-show">
                         <h2 className="meet-host">Get dinner with us!</h2>
-                        <h3>We won't be strangers much longer!</h3>
+                        <h3>We won't be strangers much longer!!</h3>
                         <h3>(Look for the "Meals With Strangers" sign)</h3>
                         <div className="host-pic-container">
                             <img src={event.image} width="100%" height="100%" alt=""/>
