@@ -10,6 +10,7 @@ import CreateEventFormContainer from './events/create_event_form_container';
 import EditEventFormContainer from './events/edit_event_form_container';
 import EventShowContainer from './events/event_show_container';
 import DashboardContainer from './dashboard/dashboard_container';
+import UpdateUserContainer from './session/update_user_container';
 
 
 const App = () => (
@@ -31,6 +32,7 @@ const App = () => (
             <Route exact path="/events/:eventId/edit" component={EditEventFormContainer} />
             <Route path="/events/new" component={CreateEventFormContainer} />
             <Route exact path="/events/:eventId" component={EventShowContainer} />
+            <Route exact path="/update" component={UpdateUserContainer} />
             <Route path="/" component={SplashComponent} />
         </Switch>
     </div>
