@@ -32,7 +32,7 @@ export const logout = () => {
 export const updateCurrentUser = user => {
     return(
         $.ajax({
-            method: 'UPDATE',
+            method: 'PATCH',
             url: `api/users/${user.id}`,
             data: { user }
         })
