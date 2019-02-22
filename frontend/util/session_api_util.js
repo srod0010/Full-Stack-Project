@@ -27,3 +27,14 @@ export const logout = () => {
     )
 }
 
+
+
+export const updateCurrentUser = user => {
+    return(
+        $.ajax({
+            method: 'UPDATE',
+            url: `api/users/${user.id}`,
+            data: { user }
+        })
+    )
+}
