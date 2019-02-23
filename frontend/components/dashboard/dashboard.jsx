@@ -38,6 +38,7 @@ class Dashboard extends React.Component {
                 <div className="dashboard-content">
                     <div className="dashboard-content-text"> 
                         <h1>Welcome Home!</h1>
+                        <button className='show-signup' onClick={() => this.props.history.push('/update')}>Update your profile</button>
                         <h3>See all the events you are involved in!</h3>
 
                     </div>
