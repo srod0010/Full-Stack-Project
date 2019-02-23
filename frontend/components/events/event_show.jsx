@@ -80,23 +80,7 @@ class EventShow extends React.Component {
         if (!event) {
             return <div>There is none</div>
         }
-        // debugger
-        // let joinId = this.props.currentUserJoin.id;
-        
-
-        // let joinButton = (
-        //   <button
-        //     className="show-signup"
-        //     onClick={() =>
-        //       this.props.createJoin({
-        //         user_id: this.props.currentUserId,
-        //         event_id: this.props.event.id
-        //       })
-        //     }
-        //   >
-        //     Join the event!
-        //   </button>
-        // );
+       
         let joinButton = (
           <button
             className="show-signup"
@@ -105,14 +89,7 @@ class EventShow extends React.Component {
           </button>
         );
 
-        // let leaveButton = (
-        //   <button
-        //     className="show-signup"
-        //     onClick={() => this.props.removeJoin(this.props.event.id)}
-        //   >
-        //     Leave the event :(
-        //   </button>
-        // );
+        
         let leaveButton = (
           <button
             className="show-signup"
@@ -126,12 +103,7 @@ class EventShow extends React.Component {
                                 Sign Me Up
                             </button>
 
-        // let deleteButton = <button className="show-signup" onClick={() => {
-        //     this.props.deleteEvent(event.id)
-        //         .then(res => this.props.history.push("/events"))
-        // }}>
-        //     Cancel Your Event :(
-        // </button>
+       
         let deleteButton = <button className="show-signup" onClick={this.handleCancel}>
             Cancel Your Event :(
         </button>
@@ -140,15 +112,7 @@ class EventShow extends React.Component {
 
         let showPageButton;
         let hostEditButton = <button className="show-signup" onClick={() => this.props.history.push(`/events/${event.id}/edit`)}>Update Event</button>
-        // if (this.props.currentUserId === event.host_id) {
-        //     showPageButton = deleteButton;
-        // } else if (!this.props.currentUserId) {
-        //     showPageButton = signupButton;
-        // } else if (this.props.currentUserJoin) {
-        //     showPageButton = leaveButton;
-        // } else {
-        //     showPageButton = joinButton;
-        // }
+        
        
         if(this.props.currentUserId) {
             if (this.props.currentUserId === event.host_id) {
