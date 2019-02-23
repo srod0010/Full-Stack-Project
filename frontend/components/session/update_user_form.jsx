@@ -26,12 +26,30 @@ class UpdateUserForm extends React.Component {
     render() {
         // debugger
         return(
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input className="form-inputs" type="text" placeholder="username" value={this.state.username} onChange={this.update('username')} />
-                    <input className="create-event-submit" type="submit" value="submit" />
+
+            <div className="signup-wrapper">
+                <form onSubmit={this.handleSubmit} className="signup-form">
+                    <div className="signup-fields">
+                        <h2>Update Your Profile!</h2>
+                        <h4 className="signup-description">Let us know what's changed!</h4>
+                        <input type="text" placeholder="Username" value={this.state.username} onChange={this.update("username")} />
+
+                        <input type="text" placeholder="Email Address" value={this.state.email} onChange={this.update("email")} />
+
+                        <input type="text" placeholder="City" value={this.state.city} onChange={this.update("city")} />
+
+
+                        <br />
+
+
+                        <input className="signup-submit" type="submit" value="Update" />
+                        <h4> {this.props.navLink} </h4>
+
+
+                    </div>
                 </form>
-            </div>
+            </div>  
+            
         )
     }
 }
