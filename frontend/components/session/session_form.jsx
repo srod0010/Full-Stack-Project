@@ -33,7 +33,7 @@ class sessionForm extends React.Component {
     
     renderErrors() {
         return (
-            <ul>
+            <ul className="signup-errors">
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -77,12 +77,11 @@ class sessionForm extends React.Component {
             
             return (
                 <div className="signup-wrapper">
-                    {this.renderErrors()}
                     <form onSubmit={this.handleSubmit} className="signup-form">
                         <div className="signup-fields">
                             <h2>Join us for a meal</h2>
                             <h4 className="signup-description">1000s of people around the world are discovering the joy of new meals and conversations with strangers</h4>
-                            
+                            {this.renderErrors()}
                             <input type="text" placeholder="Username" value={this.state.username} onChange={this.update("username")} />
                             
                             <input type="text" placeholder="Email Address" value={this.state.email} onChange={this.update("email")} />
