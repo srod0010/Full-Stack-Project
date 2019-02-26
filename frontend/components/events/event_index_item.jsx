@@ -1,13 +1,21 @@
 import React from 'react';
 import {withRouter, Link} from 'react-router-dom';
 import ProgressBar from '../progress/progress_bar';
+import moment from 'moment';
 
 
 const eventIndexItem = ({event,deleteEvent, image}) => {
+    ///// moment calc ////////////
+    let dayOfWeek = moment(event.date).format('dddd')
+    let monthDay = moment(event.date).format("MMM Do").toUpperCase();
+    let eventTime = moment(event.date).format('LT');
+
+    ///////// old date calc /////////////
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL','AUG','SEPT','OCT','NOV','DEC'];
     let utcFull = new Date(event.date);
     
+    // debugger
     let utcMonth = utcFull.getUTCMonth(); // 0-12 month of year
     let utcDate = utcFull.getUTCDate(); // day of month
     let utcDay = utcFull.getUTCDay(); // 0-7 day of week
@@ -43,9 +51,9 @@ const eventIndexItem = ({event,deleteEvent, image}) => {
           <div className="tt-container">
             <div className="tt-date-pic">
               <div className="tt-date">
-                <p className="displayDay">{displayDay}</p>
-                <p className="displayDate">{displayDate}</p>
-                <p className="displayHour">{displayHour}</p>
+                <p className="displayDay">{dayOfWeek}</p>
+                <p className="displayDate">{monthDay}</p>
+                <p className="displayHour">{eventTime}</p>
                
               </div>
               <div className="event-corner-pic">
@@ -66,10 +74,7 @@ const eventIndexItem = ({event,deleteEvent, image}) => {
             </div>
            
           </div>
-          {/* <h3> Join us for: {event.name}</h3> */}
-          {/* <button onClick={() => history.push(`/events/${event.id}/edit`)}>Edit</button> */}
         </Link>
-        {/* <button onClick={() => deleteEvent(event.id)}>Delete</button> */}
       </div>;
 }
 
