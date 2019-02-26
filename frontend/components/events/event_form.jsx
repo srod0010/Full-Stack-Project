@@ -1,5 +1,6 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
+import moment from 'moment';
 
 class EventForm extends React.Component {
   constructor(props) {
@@ -21,9 +22,27 @@ class EventForm extends React.Component {
     return e => this.setState({[field]: e.target.value})
   }
 
+  checkDate() {
+    let proposedDate = moment(this.state.date)
+    let validDate = moment().isBefore(proposedDate)
+
+    if (!validDate) {
+      let dateErrors = document.getElementById('event-errors')
+      dateErrors.style.display = 'block';
+      return false;
+    } 
+
+    return true;
+  }
+
   handleSubmit(e) {
     e.preventDefault();
-    return this.props.action(this.state).then(() => this.props.history.push('/events'));
+    let validDate = this.checkDate();
+
+      if (validDate) {
+        return this.props.action(this.state).then(() => this.props.history.push('/events'));
+      }
+   
   }
 
   render () {
@@ -33,7 +52,7 @@ class EventForm extends React.Component {
         <div className="event-form-wrapper">
           <form onSubmit={this.handleSubmit}>
             <h1 id="create-header">Host an event!</h1>
-        
+            <div id="event-errors">Events must be planned at least one day in advance!</div>
             <input className="form-inputs" type="text" placeholder="Event Title" value={this.state.name} onChange={this.update('name')} />
             <br/>
             <input className="form-inputs" type="text" placeholder="Description" value={this.state.description} onChange={this.update('description')} />
