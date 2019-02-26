@@ -5,33 +5,13 @@ import moment from 'moment';
 
 
 const eventIndexItem = ({event,deleteEvent, image}) => {
-    ///// moment calc ////////////
+    
     let dayOfWeek = moment(event.date).format('dddd')
     let monthDay = moment(event.date).format("MMM Do").toUpperCase();
     let eventTime = moment(event.date).format('LT');
-
-    ///////// old date calc /////////////
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL','AUG','SEPT','OCT','NOV','DEC'];
-    let utcFull = new Date(event.date);
     
-    // debugger
-    let utcMonth = utcFull.getUTCMonth(); // 0-12 month of year
-    let utcDate = utcFull.getUTCDate(); // day of month
-    let utcDay = utcFull.getUTCDay(); // 0-7 day of week
-    let utcHour = ((utcFull.getHours() + 11) % 12 + 1);
-    let endHour = ((utcFull.getHours() + 13) % 12 + 1);
-
-    let suffix = utcFull.getHours() >= 12 ? "PM" : "AM";
- 
-    
-    let displayMonth = months[utcMonth]; // feb
-    let displayDay = days[utcDay]; // sunday
-
-    // let testDate = event.date.split('T')[1];
-    let displayDate = displayMonth + ' ' + utcDate; // feb 4
     let displayAddress = `${event.location}, ${event.city}, CA`;
-    let displayHour = `${utcHour} - ${endHour} ${suffix}`
+    
     let displaySpots = `${event.spots} spots left!`
   let images = [
     "https://cdn0.iconfinder.com/data/icons/city-elements-9/128/City_New_York-512.png",
