@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 class EventShow extends React.Component {
     constructor(props) {
@@ -15,18 +16,6 @@ class EventShow extends React.Component {
         let Id = this.props.match.params.eventId
         this.props.fetchEvent(Id)
         
-    }
-
-    getDate() {
-        let newDate = this.props.event.date;
-        let dateShow = newDate.slice(0,10);
-        return dateShow;
-    }
-
-    getTime() {
-        let time = this.props.event.date;
-        let timeSlice = time.slice(11);
-        return timeSlice;
     }
     
     handleSignup(e) {
@@ -136,11 +125,13 @@ class EventShow extends React.Component {
         }
         
        
-
+        let eventDate = moment(event.date).format('LL');
+        let eventTime = moment(event.date).format('LT')
+    
         // debugger;
-        if (!event) {
-            return (<div> Theres no event</div>);
-        }
+        // if (!event) {
+        //     return (<div> Theres no event</div>);
+        // }
         
         return (
             <div className="show-container">
@@ -149,8 +140,8 @@ class EventShow extends React.Component {
                         <div className="left-first">
                             <div className="left-first-inner">
                                 <h2 className="event-name">Join us for {event.name}</h2>
-                                <h3 className="left-date"> 🗓 {this.getDate()}</h3>
-                                <h3 className="left-date"> ⏰ {this.getTime()} PM</h3>
+                                <h3 className="left-date"> 🗓 {eventDate}</h3>
+                                <h3 className="left-date"> ⏰ {eventTime}</h3>
                                 <h3 className="left-date"> 📍 {this.props.event.location}</h3>
                                 <h3 className="left-date"> 🌇 {this.props.event.city}</h3>
                                 <h3 className="left-date"> {this.props.event.spots === 0 ? "🔒 Sorry, this one's full!" : `🔓${this.props.event.spots} spots left`}</h3>
