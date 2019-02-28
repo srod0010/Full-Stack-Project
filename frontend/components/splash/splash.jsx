@@ -11,7 +11,7 @@ const splashComponent = () => {
               </h1>
               <h2 className="inner-text">Grab a Meal With Strangers</h2>
               <div className="splash-signup">
-                <Link to="/signup">Lets Eat!</Link>
+                <Link to="/events">Lets Eat!</Link>
               </div>
             </div>
           </div>

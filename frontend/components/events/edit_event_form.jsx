@@ -15,6 +15,7 @@ class EditEventForm extends React.Component {
 
     render() {
         const { action, event } = this.props;
+        
         return (
             <EventForm
                 action={action}

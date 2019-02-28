@@ -47,6 +47,7 @@ class EventForm extends React.Component {
 
   render () {
       console.log(this.state)
+      // debugger;
     return (
       <div className="form-page-wrapper">
         <div className="event-form-wrapper">

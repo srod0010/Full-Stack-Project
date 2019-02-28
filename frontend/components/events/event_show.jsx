@@ -32,7 +32,7 @@ class EventShow extends React.Component {
         
         return (
             deleteEvent(event.id)
-                .then(res => this.props.history.push("/events"))
+                .then(res => this.props.history.goBack())
 
         )
     }
