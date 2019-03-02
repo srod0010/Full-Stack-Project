@@ -139,7 +139,7 @@ class EventShow extends React.Component {
                     <div className="left-show">
                         <div className="left-first">
                             <div className="left-first-inner">
-                                <h2 className="event-name">Join us for {event.name}</h2>
+                                <h2 className="event-name">Join us at {event.name}</h2>
                                 <h3 className="left-date"> 🗓 {eventDate}</h3>
                                 <h3 className="left-date"> ⏰ {eventTime}</h3>
                                 <h3 className="left-date"> 📍 {this.props.event.location}</h3>
