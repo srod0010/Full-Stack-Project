@@ -47,7 +47,7 @@ class sessionForm extends React.Component {
     
 
     render() {
-        let demoUser = {email: "pass", password: "password"};
+        let demoUser = { email: "Guest", password: "Guest123"};
         
         if(this.props.formType ==='Login'){
         return(
@@ -58,7 +58,7 @@ class sessionForm extends React.Component {
                         <p>Its good to have you back. Please sign in below</p>
                         
                         {this.renderErrors()}
-                        <input type="text" placeholder="Email Address" value={this.state.email} onChange={this.update("email")}/>
+                        <input type="text" placeholder="Username" value={this.state.email} onChange={this.update("email")}/>
                         <br/>
                         <input type="password" placeholder="Password" value={this.state.password} onChange={this.update("password")}/>
                         <br/>
