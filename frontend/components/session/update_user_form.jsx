@@ -32,7 +32,6 @@ class UpdateUserForm extends React.Component {
                     <div className="signup-fields">
                         <h2>Update Your Profile!</h2>
                         <h4 className="signup-description">Let us know what's changed!</h4>
-                        <input type="text" placeholder="Username" value={this.state.username} onChange={this.update("username")} />
 
                         <input type="text" placeholder="Email Address" value={this.state.email} onChange={this.update("email")} />
 
