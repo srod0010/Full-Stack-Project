@@ -13,7 +13,8 @@ export const receiveJoin = payload => ({
 export const deleteJoin = payload => ({
     type: DELETE_JOIN,
     join: payload.join,
-    // event: payload.event
+    user: payload.user
+    
 
 })
 
