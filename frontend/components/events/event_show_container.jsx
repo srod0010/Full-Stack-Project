@@ -8,15 +8,13 @@ import {createJoin, removeJoin} from '../../actions/join_actions';
 const mapStateToProps = (state, ownProps) => {
     let eventId = ownProps.match.params.eventId;
     let event = state.entities.events[eventId];
-    // let hostId = state.entities.events[eventId].host_id;
     
-    // debugger;
     return ({
-        // host: hostId,
         event: event,
         currentUserId: state.session.id,
         users: state.entities.users,
         join: state.entities.joins,
+        guests: Object.values(state.entities.attendees),
         attendees: Object.values(state.entities.joins),
         currentUserJoin: Object.values(state.entities.joins).filter(join => join.user_id == state.session.id && join.event_id == eventId)[0]
     })
