@@ -31,7 +31,7 @@ class Dashboard extends React.Component {
             return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} image={event.image} />
         })
 
-        // debugger
+        
         return(
             
             <div className="dashboard-wrapper">

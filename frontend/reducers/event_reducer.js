@@ -11,9 +11,9 @@ const eventsReducer = (state = {}, action) => {
             } else {
                 return {}
             }
-            //action.payload.events
+            
         case RECEIVE_EVENT:
-            // debugger
+            
             return merge({}, state, {[action.payload.event.id]: action.payload.event})
         case REMOVE_EVENT:
             let newState = merge({}, state);
@@ -26,4 +26,3 @@ const eventsReducer = (state = {}, action) => {
 
 export default eventsReducer;
 
-// json.partial!'event', event: @event

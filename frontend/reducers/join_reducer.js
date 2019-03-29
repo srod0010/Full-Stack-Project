@@ -8,22 +8,22 @@ const joinReducer = (state = {}, action) => {
     switch(action.type) {
 
         case RECEIVE_JOIN:
-        // debugger
+        
             return merge({}, state, {[action.payload.join.id]: action.payload.join});
         case DELETE_JOIN:
-        // debugger
+        
             let newState = merge({}, state);
             delete newState[action.join.id];
             return newState;
         case RECEIVE_EVENTS:
-        // debugger
+        
             if(action.payload.joins) {
                 return action.payload.joins;
             } else {
                 return {};
             }
         case RECEIVE_EVENT:
-        // debugger
+        
             if(action.payload.joins) {
                 return action.payload.joins;
             } else {
@@ -37,14 +37,3 @@ const joinReducer = (state = {}, action) => {
 
 export default joinReducer;
 
-// json.joins do
-//     @events.each do |event|
-//         event.joins.each do |join|
-//             json.set! join.id do
-//                 json.extract! join, :id, :user_id, :event_id
-//             end
-//         end
-//     end
-// end
-
-        //  json.partial!'event', event: event

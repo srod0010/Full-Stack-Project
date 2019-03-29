@@ -14,7 +14,6 @@ class UpdateUserForm extends React.Component {
     }
 
     update(field) {
-        console.log(this.state);
         return e => this.setState({ [field]: e.target.value })
     }
 
@@ -24,7 +23,7 @@ class UpdateUserForm extends React.Component {
     }
 
     render() {
-        // debugger
+    
         return(
 
             <div className="signup-wrapper">

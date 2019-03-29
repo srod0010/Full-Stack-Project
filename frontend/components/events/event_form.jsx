@@ -5,7 +5,6 @@ import moment from 'moment';
 class EventForm extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props.event);
     this.state = this.props.event || {};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -46,8 +45,6 @@ class EventForm extends React.Component {
   }
 
   render () {
-      console.log(this.state)
-      // debugger;
     return (
       <div className="form-page-wrapper">
         <div className="event-form-wrapper">
