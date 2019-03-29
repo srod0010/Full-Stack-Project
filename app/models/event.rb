@@ -27,4 +27,8 @@ class Event < ApplicationRecord
     foreign_key: :event_id,
     class_name: :Join
     
+    has_many :attendees,
+        through: :joins,
+        source: :user
+        
 end
