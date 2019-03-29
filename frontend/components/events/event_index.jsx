@@ -10,14 +10,12 @@ class EventIndex extends React.Component {
     }
 
     componentDidMount() {
-      // debugger
+      
         this.props.fetchEvents();
     }
 
     render() {
-        // let eventItems = this.props.events.map(event => {
-        //     return <EventIndexItem event={event} key={event.id} deleteEvent={this.props.deleteEvent} />
-        // })
+        
         
         let sf = this.props.events.filter(event => {
             return (event.city === 'San Francisco' || event.city === 'sf')
