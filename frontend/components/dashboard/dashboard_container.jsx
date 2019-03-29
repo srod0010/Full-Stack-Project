@@ -6,7 +6,7 @@ import Dashboard from './dashboard';
 
 
 const mapStateToProps = state =>{
-    // debugger;
+    
     return  ({
     joinedEvents: Object.values(state.entities.joins)
         .filter(join => join.user_id === state.session.id)
