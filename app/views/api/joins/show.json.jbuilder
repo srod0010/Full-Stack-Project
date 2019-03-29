@@ -9,3 +9,7 @@ json.event do
         json.extract! @join.event.host, :username, :email, :city
     end
 end
+
+json.user do
+    json.extract! @join.user, :id
+end
