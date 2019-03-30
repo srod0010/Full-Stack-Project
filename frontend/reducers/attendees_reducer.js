@@ -8,7 +8,11 @@ const attendeeReducer = (state = defaultState, action) => {
 
     switch(action.type) {
         case RECEIVE_EVENT:
-            return action.payload.attendees;
+            if (action.payload.attendees){
+                return action.payload.attendees;
+            } else {
+                return state;
+            }
         case DELETE_JOIN:
             const userId = action.user.id;
             let newObj = merge({},state);
