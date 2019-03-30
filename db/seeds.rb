@@ -95,3 +95,19 @@ join25 = Join.create(user_id: user5.id, event_id: event9.id)
 #10 host 2 spots 3
 join26 = Join.create(user_id: user5.id, event_id: event10.id)
 
+#### reviews #####
+review1 = Review.create(user_id: guest.id, event_id: event1.id, body: 'I love this place!', rating: 5)
+review2 = Review.create(user_id: user4.id, event_id: event1.id, body: 'This place is pretty good.', rating: 4)
+
+review3 = Review.create(user_id: user3.id, event_id: event2.id, body: 'First time here, it was great!.', rating: 5)
+review4 = Review.create(user_id: user4.id, event_id: event2.id, body: 'Amaaziiiiing', rating: 5)
+
+review5 = Review.create(user_id: user1.id, event_id: event3.id, body: 'Service was a little slow last time', rating: 3)
+review7 = Review.create(user_id: user2.id, event_id: event4.id, body: 'Looking forward to it!', rating: 4)
+review8 = Review.create(user_id: user5.id, event_id: event5.id, body: 'This place is pretty good.', rating: 4)
+review9 = Review.create(user_id: user6.id, event_id: event6.id, body: 'Service is wonderful, food is decent', rating: 4)
+review10 = Review.create(user_id: user7.id, event_id: event7.id, body: 'Ill be back for sure', rating: 4)
+review11 = Review.create(user_id: guest.id, event_id: event8.id, body: 'Just OK', rating: 3)
+review12 = Review.create(user_id: user1.id, event_id: event9.id, body: 'Didnt like this one, but appreciate the effort!', rating: 4)
+review13 = Review.create(user_id: user3.id, event_id: event10.id, body: 'Boringgg, can we do more upscale choices', rating: 3)
+
