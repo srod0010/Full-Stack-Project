@@ -1,0 +1,75 @@
+// Place all the styles related to the api/reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.reviews-container{
+    width: 100%;
+    height: 10%;
+    border-top: 3px solid #EF6236;
+    overflow: scroll;
+}
+.review-item-container {
+    width: 100%;
+    min-height: 50px;
+    max-height: 100px;
+    padding-left: 0;
+    margin: 0;
+    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    border-bottom: 2px solid #eda20b;
+}
+.review-item-container:last-child {
+    border-bottom: none;
+}
+
+.review-item-info{
+    width: 80%;
+    overflow: scroll;
+}
+
+.review-item-info h4{
+    margin: 2px;
+    font-family: cursive;
+}
+.review-item-info p{
+    margin: 0;
+}
+
+.center-review-img{
+    width: 20%;
+    min-height: 50px;
+    max-height: 100px;
+    background-color: white;
+}
+
+.review-form-container{
+    width: 100%;
+    height: 20%;
+    // border: 1px solid red;
+}
+
+.review-form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-submit{
+    width: 100px;
+    height: 20px;
+    font-size: 10px;
+    vertical-align: middle;
+}
+
+.review-redirect{
+    text-decoration: underline;
+    color: #EF6236;
+    font-weight: 600;
+    position: relative;
+    left: 30%;
+    margin-bottom: 10px;
+    
+}
