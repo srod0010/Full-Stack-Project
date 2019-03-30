@@ -1,38 +1,70 @@
 # MealsWithStrangers
 
-[Live Demo](https://meals-with-strangers.herokuapp.com/#/)
+## Table Of Contents
+- ### [Background and Overview](#background-and-overview)
+- ### [Features](#features)
+- ### [Technologies](#technologies)
+    - ##### [Demo](#demo)
+- ### [Site](#site)
+    - ##### [Splash](#splash)
+    - ##### [Dashboard](#dashboard)
+    - ##### [Event Index](#event-index)
+    - ##### [Joins and Reviews](#joins-and-reviews)
 
-MealsWithStrangers is a platform that allows people to enjoy the cuisine that they love in the company of others. Users no longer have to worry about not having plans or dates and can instead treat themselves to delightful new food and conversations.
+### Background and Overview
 
-The project, which was built in 9 days, utilizes Rails and PostgreSQL on the backend and React.js/Redux on the frontend. 
+Meals With Strangers is a platform that connects users with their neighbors (strangers) over food! It is inspired by [Tea With Strangers](http://www.teawithstrangers.com/)
 
-# Features
-
-- User Authoization from frontend to backend utilizing BCrypt password hashing
-
+### Features
+- User Authorization from frontend to backend utilizing BCrypt password hashing
 - Index page where users can see events, filtered by city
-
 - Hosting page where user can create a new event
+- Users can review events
+- Users are able to join and leave events
+- Dashboard displays hosted events, joined events, and provides access to update account information
+### Technologies
+Meals With Strangers was built on a `Ruby on Rails` backend with a `React/Redux` frontend. User data such as login, events, and reviews are stored in a `PostgreSQL` database.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Demo
+- [Live Demo](https://meals-with-strangers.herokuapp.com/#/)
 
-Things you may want to cover:
 
-* Ruby version
+### Site
+- #### Splash
+    
+    ![image](app/assets/images/splash1.png)
 
-* System dependencies
+- #### Dashboard
 
-* Configuration
+    ![image](app/assets/images/dashboard.png)
 
-* Database creation
+- #### Event Index
 
-* Database initialization
+    ![image](app/assets/images/event_index.png)
 
-* How to run the test suite
+- #### Joins and Reviews
 
-* Services (job queues, cache servers, search engines, etc.)
+    ![image](app/assets/images/join_review.png)
 
-* Deployment instructions
 
-* ...
+
+
+[Back to the top](#table-of-contents)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
