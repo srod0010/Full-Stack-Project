@@ -30,5 +30,10 @@ class Event < ApplicationRecord
     has_many :attendees,
         through: :joins,
         source: :user
+
+    has_many :reviews,
+        primary_key: :id,
+        foreign_key: :event_id,
+        class_name: :Review
         
 end

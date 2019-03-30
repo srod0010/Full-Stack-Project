@@ -27,6 +27,11 @@ class User < ApplicationRecord
     has_many :joins,
         foreign_key: :user_id,
         class_name: :Join
+
+    has_many :reviews,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Review
     
     def self.find_user_by_credentials(username, password)
         user = User.find_by(username: username)
