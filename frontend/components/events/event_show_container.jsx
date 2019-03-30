@@ -8,9 +8,11 @@ import {createJoin, removeJoin} from '../../actions/join_actions';
 const mapStateToProps = (state, ownProps) => {
     let eventId = ownProps.match.params.eventId;
     let event = state.entities.events[eventId];
+    let reviews = state.entities.reviews
     
     return ({
         event: event,
+        reviews: Object.values(reviews),
         currentUserId: state.session.id,
         users: state.entities.users,
         join: state.entities.joins,

@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import GuestInfo from '../guest/guest_info';
+import ReviewFormContainer from '../reviews/review_form_container';
+import ReviewIndex from '../reviews/review_index';
 
 class EventShow extends React.Component {
     constructor(props) {
@@ -61,6 +63,18 @@ class EventShow extends React.Component {
         
         removeJoin(event.id);
         updateEvent(event)
+    }
+
+    addReview(){
+      if (this.props.currentUserId){
+        return <ReviewFormContainer eventID={this.props.event.id} />;
+      } else {
+        return (
+          <Link className="review-redirect" to="/login">
+            You need to log in to write a review!
+          </Link>
+        );
+      }
     }
 
     render() {
@@ -209,7 +223,11 @@ class EventShow extends React.Component {
                     alt=""
                   />
                 </div>
-                <h2> <span className='down-arrow'>⬇</span> See who you will be dining with<span className='down-arrow'>⬇</span></h2>
+                <h2>
+                  {" "}
+                  <span className="down-arrow">⬇</span> See who you will
+                  be dining with<span className="down-arrow">⬇</span>
+                </h2>
                 <div className="guest-information">
                   {guests.map(guest => (
                     <GuestInfo key={guest.id} guest={guest} />
@@ -217,20 +235,22 @@ class EventShow extends React.Component {
                 </div>
                 <div className="host-information">
                   <h4>
-                    Do you sometimes crave uninterrupted conversation?{" "}
+                    Are you attending? Have you eaten here before?{" "}
                   </h4>
                   <p>
-                    Have you ever looked at someone in the street and
-                    wished to know what it would be like to view life
-                    through their eyes?{" "}
+                    Meals With Strangers is all about bringing
+                    people together. A big part of that is picking
+                    the right spot!!{" "}
                   </p>
-                  <h4>Do you enjoy dining out?</h4>
-                  <p>
-                    If so, you've come to the right place. Join me for a
-                    meal and let's exchange stories, and learn about the
-                    world through each other.
-                  </p>
+                  <h4>Let the host know what you think!</h4>
+                  
+                  
+                  <ReviewIndex reviews={this.props.reviews} />
                 </div>
+                <div className="review-form-container">
+                  {this.addReview()}
+                </div>
+                
               </div>
             </div>
           </div>
